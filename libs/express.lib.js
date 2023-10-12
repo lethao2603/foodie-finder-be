@@ -4,16 +4,28 @@ const helmet = require("helmet");
 const rateLimit = require("express-rate-limit");
 const AppError = require("../utils/appError.util");
 const bodyParser = require("body-parser");
+
+const mongoose = require('mongoose');
+const fileUpload = require('express-fileupload');
+
 const app = express();
 const globalErrorHandler = require("../controllers/globalError.controller");
+const apiRoutes = (require("./../routes/index"));
 // Allow Cross-Origin requests
 app.use(cors());
-
 // Set security HTTP headers
 app.use(helmet());
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+//config file upload
+// default options
+app.use(fileUpload());
+
+//config  req.body
+app.use(express.json()) // for JSON
+app.use(express.urlencoded({ extended: true})) // for form data
+
+//config template engine
+//configViewEngine(app);
 
 // set limited request
 const limiter = rateLimit({
@@ -24,7 +36,7 @@ const limiter = rateLimit({
 
 app.use("/api", limiter);
 
-app.use(require("./../routes/index"));
+app.use(apiRoutes);//router.use('/api', require('./apis'));
 
 // handle undefined Routes
 app.use("*", (req, res, next) => {
