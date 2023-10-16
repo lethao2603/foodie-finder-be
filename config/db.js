@@ -8,7 +8,7 @@ const mongoose = require("mongoose")
 
 const connect = () => {
   new Promise((resolve, reject) => {
-    mongoose.connect(//'mongodb+srv://root:root123456@cluster0-huyvo.3cy1sge.mongodb.net/foodi_finder?retryWrites=true&w=majority',
+    mongoose.connect(
       `mongodb+srv://${MONGODB_USERNAME}:${MONGODB_PASSWORD}@${MONGODB_HOSTNAME}/${MONGODB_DATABASE}?retryWrites=true&w=majority`,
       {
         useCreateIndex: true,
