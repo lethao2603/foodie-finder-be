@@ -1,11 +1,15 @@
 const { signAccessToken, signRefreshToken } = require("../utils/auth.util");
 const User = require("./../models/user.model");
 const AppError = require("../utils/appError.util");
-const { CLIENT_ERROR_MESSAGE, CLIENT_BASE_URL, EMAIL_VERIFY_SUBJECT } = require("../constants/config.constant");
-const Token = require("../models/token.model")
-const crypto = require("crypto")
-const sendMail = require("../utils/sendMail.util")
-const {getVerifyEmailTemplate} = require("../utils/helper.util")
+const {
+  CLIENT_ERROR_MESSAGE,
+  CLIENT_BASE_URL,
+  EMAIL_VERIFY_SUBJECT,
+} = require("../constants/config.constant");
+const Token = require("../models/token.model");
+const crypto = require("crypto");
+const sendMail = require("../utils/sendMail.util");
+const { getVerifyEmailTemplate } = require("../utils/helper.util");
 exports.register = async (req, res, next) => {
   try {
     const newUser = await User.create(req.body);
@@ -13,22 +17,22 @@ exports.register = async (req, res, next) => {
 
     const token = await new Token({
       userId: newUser._id,
-      token: crypto.randomBytes(32).toString("hex")
+      token: crypto.randomBytes(32).toString("hex"),
     }).save();
     const url = `${CLIENT_BASE_URL}/user/${newUser._id}/verify/${token.token}`;
-    await sendMail(newUser.email, EMAIL_VERIFY_SUBJECT, getVerifyEmailTemplate(url))
+    await sendMail(newUser.email, EMAIL_VERIFY_SUBJECT, getVerifyEmailTemplate(url));
     res.status(200).send({
       status: "success",
       data: {
         user: newUser,
-        message: "An email sent to your account, please verify"
+        message: "An email sent to your account, please verify",
       },
     });
   } catch (err) {
     next(err);
   }
 };
-
+//Login user and send jwt
 exports.login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
@@ -82,7 +86,6 @@ exports.verifyLink = async (req, res, next) => {
     next(err);
   }
 };
-
 
 exports.logout = async (req, res, next) => {};
 
