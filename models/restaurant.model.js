@@ -12,12 +12,6 @@ const restaurantOwnerSchema = new mongoose.Schema({
 
 })
 
-// const restaurantMenuSchema = new mongoose.mongoose.Schema({
-//     name: String,
-//     photo: String,
-//     price: String,
-// })
-
 const restaurantSchema = new mongoose.Schema({
     resname: {
         type: String,
