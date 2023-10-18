@@ -1,6 +1,6 @@
 const { signAccessToken, signRefreshToken } = require("../utils/auth.util");
 const User = require("./../models/user.model");
-const AppError = require("../utils/appError.util").default;
+const AppError = require("./../utils/appError.util");
 const { CLIENT_ERROR_MESSAGE } = require("../constants/config.constant");
 exports.register = async (req, res, next) => {
   try {
