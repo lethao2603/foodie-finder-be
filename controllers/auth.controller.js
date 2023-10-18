@@ -6,7 +6,6 @@ const Token = require("../models/token.model")
 const crypto = require("crypto")
 const sendMail = require("../utils/sendMail.util")
 const {getVerifyEmailTemplate} = require("../utils/helper.util")
-
 exports.register = async (req, res, next) => {
   try {
     const newUser = await User.create(req.body);
