@@ -1,36 +1,28 @@
 const mongoose = require('mongoose');
 
 const mongoose_delete = require('mongoose-delete');
-
-const restaurantCategorySchema = new mongoose.Schema({
-    categoryName: String,
-})
-
-const restaurantOwnerSchema = new mongoose.Schema({
-    nameOwner: String,
-    email: String,
-
-})
+const { DateTime } = require('mssql');
 
 const restaurantSchema = new mongoose.Schema({
-    resname: {
-        type: String,
-        required: true
+    resname: {type: String,required: true},
+    address: {
+        street: {type: String,required: true},
+        district: {type: String,required: true},
+        province: {type: String,required: true},
     },
-    adress: String,
-    timeOpen: String,
-    timeClose: String,
-    seats: String,
-    typeOfRes: String,
-    averagePrice: String,
-    pointEvaluation: String,
+    timeOpen: {type: String,required: true},
+    timeClose: {type: String,required: true},
+    seats: {type: Number,required: true},
+    typeOfRes: {type: String,required: true},
+    averagePrice: Number,
+    pointEvaluation: Number,
     description: String,
     image: String,
-    resMenuInfor: [{type: mongoose.Schema.Types.ObjectId, ref: 'menu'}],
-    resCateInfor: restaurantCategorySchema,
-    resOwnerInfor: restaurantOwnerSchema,
-    reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: 'reviews'}],
-    reservations: [{type: mongoose.Schema.Types.ObjectId, ref: 'reservations'}],
+    resMenuInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'menu'},
+    //resCateInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'restaurantCategories'},
+    //resOwnerInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'users'},
+    // reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: 'reviews'}],
+    // reservations: [{type: mongoose.Schema.Types.ObjectId, ref: 'reservations'}],
     },
     {timestamps: true } // createAt, updateAt
 )

@@ -31,11 +31,11 @@ module.exports = {
   },
   getRestaurant: async (queryString) => {
     const page = queryString.page;
+    const population = queryString.populate;
     const { filter, limit } = aqp(queryString);
     let offset = (page - 1) * limit;
     delete filter.page;
     result = await Restaurant.find(filter).populate(population).skip(offset).limit(limit).exec();
-
     return result;
   },
   updateRestaurant: async (data) => {
@@ -52,10 +52,16 @@ module.exports = {
     const { filter, limit } = aqp(queryString);
     let offset = (page - 1) * limit;
     delete filter.page;
+
     let result = await Restaurant.find({
-      $or: [{ resname: { $regex: search, $options: "i" } }, { typeOfRes: { $regex: search, $options: "i" } }],
-    })
-      .skip(offset)
+      $or: [
+        { resname: { $regex: search, $options: "i" } }, 
+        { typeOfRes: { $regex: search, $options: "i" } },
+        { "address.street": { $regex: search, $options: "i" } },
+        { "address.district": { $regex: search, $options: "i" } },
+        { "address.province": { $regex: search, $options: "i" } }
+      ]
+    }).skip(offset)
       .limit(limit)
       .exec();
 

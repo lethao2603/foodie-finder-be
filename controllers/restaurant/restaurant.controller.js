@@ -1,7 +1,6 @@
 const useServices = require("../../services/restaurant/restaurantServices")
 
 //const fileServices = require("../../services/file.services");
-const { use } = require("../../routes/apis");
 
 module.exports = {
     postCreateRestaurant: async (req,res) => {
