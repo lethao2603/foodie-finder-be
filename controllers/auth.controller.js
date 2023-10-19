@@ -14,14 +14,13 @@ exports.register = async (req, res, next) => {
   try {
     const newUser = await User.create(req.body);
     newUser.password = undefined;
-
     const token = await new Token({
       userId: newUser._id,
       token: crypto.randomBytes(32).toString("hex"),
     }).save();
     const url = `${CLIENT_BASE_URL}/user/${newUser._id}/verify/${token.token}`;
     await sendMail(newUser.email, EMAIL_VERIFY_SUBJECT, getVerifyEmailTemplate(url));
-    res.status(200).send({
+    res.status(201).send({
       status: "success",
       data: {
         user: newUser,
@@ -29,6 +28,15 @@ exports.register = async (req, res, next) => {
       },
     });
   } catch (err) {
+    // res.status(400).json({
+    //   status: "fail",
+    //   message: err,
+    // });
+    // console.log(err.message);
+    if (!err.isOperational) {
+      err = new AppError(404, "fail", undefined, err.message);
+    }
+    // console.log(err);
     next(err);
   }
 };
@@ -43,6 +51,9 @@ exports.login = async (req, res, next) => {
     const userDb = await User.findOne({ email: email }).select("+password");
     if (!userDb) {
       throw new AppError(404, "fail", "ERR_LOGIN_2", CLIENT_ERROR_MESSAGE.ERR_LOGIN_2);
+    }
+    if (!userDb.verified) {
+      throw new AppError(404, "fail", undefined, "Email not verified");
     }
     if (!(await User.compare(password, userDb.password))) {
       throw new AppError(404, "fail", "ERR_LOGIN_3", CLIENT_ERROR_MESSAGE.ERR_LOGIN_3);
