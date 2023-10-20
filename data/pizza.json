@@ -1,0 +1,342 @@
+[
+    {
+        "deleted": "false",
+        "resname": "IVO DELI - Burger - Pizza & Gelato",
+        "address": {
+            "street": "K67/40 Lê Trọng Tấn",
+            "district": "Quận Cẩm Lệ",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "pizza",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g71/703190/prof/s640x400/foody-mobile-ivo-jpg.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Crispy Pizza",
+        "address": {
+            "street": "131 Nguyễn Duy Hiệu",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "pizza",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g98/971293/prof/s640x400/foody-upload-api-foody-mobile-71539785_11988286274-191022141328.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Pizza Sister’s",
+        "address": {
+            "street": "H11/32 Kiệt 20 Hà Thị Thân",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "pizza",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g105/1045694/prof/s640x400/foody-upload-api-foody-mobile-pizzafdhfdddd-200907155706.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Boom Pizza",
+        "address": {
+            "street": "164 Tố Hữu",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "pizza",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g106/1055556/prof/s640x400/foody-upload-api-foody-mobile-150-201113134507.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Pizza Pasta - Beef Steak",
+        "address": {
+            "street": "98B Thanh Thuỷ",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "pizza",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g95/949496/prof/s640x400/foody-upload-api-foody-mobile-anhbia-200312150941.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Olivia Pizza",
+        "address": {
+            "street": "75 Ngô Thì Sỹ",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "pizza",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g106/1053866/prof/s640x400/foody-upload-api-foody-mobile-123246458_1046000414-201103104209.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Olivia Pizza & Coffee",
+        "address": {
+            "street": "309 Hồ Nghinh",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "pizza",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g116/1154387/prof/s640x400/foody-upload-api-foody-mobile-fo-b1d0ba1b-221027161133.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Taste Pizza & Burger - Lê Trọng Tấn",
+        "address": {
+            "street": "K67/31 Lê Trọng Tấn",
+            "district": "Quận Cẩm Lệ",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "pizza",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g102/1015216/prof/s640x400/foody-upload-api-foody-mobile-quan-pizza-200326115425.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Taste Burger & Pizza",
+        "address": {
+            "street": "203 Lê Quang Đạo",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "pizza",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g99/987635/prof/s640x400/foody-upload-api-foody-mobile-7-200428151703.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Gordon's New York Pizza",
+        "address": {
+            "street": "57 An Thượng 2",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "pizza",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g106/1050907/prof/s640x400/file_restaurant_photo_3t04_16309-2784a6d8-210906105307.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Pizza Center - Hải Phòng",
+        "address": {
+            "street": "K338/H19/9 Hải Phòng",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "pizza",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g112/1113922/prof/s640x400/foody-upload-api-foody-mobile-ca-c7cd4700-230606153939.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Fratello Pizza & Burger",
+        "address": {
+            "street": "83 Ngô Thì Sỹ",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "pizza",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g105/1048719/prof/s640x400/file_restaurant_photo_7xgg_16168-9de7ce95-210327155046.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "HOUSE 44 - BURGER, PIZZA & BÒ KHO",
+        "address": {
+            "street": "44 An Thượng 5",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "pizza",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g108/1076326/prof/s640x400/foody-upload-api-foody-mobile-20-02649ee9-221124131641.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "BandB - Cafe & Trà Sữa - Dũng Sĩ Thanh Khê",
+        "address": {
+            "street": "91A Dũng Sĩ Thanh Khê",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "pizza",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100001/1000001717/prof/s640x400/file_cfb2cebb-3c2f-4c10-b463-9da-98b29a46-201222095830.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Kimpap Home's - Đồ Ăn Hàn Quốc - K408/H33/04 Hoàng Diệu",
+        "address": {
+            "street": "K408/H33/04 Hoàng Diệu",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "pizza",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100004/1000037899/prof/s640x400/file_40f1184c-1522-4a89-8967-60e-4bd332d4-211119115201.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "POETRY - Coffee & Restaurant",
+        "address": {
+            "street": "53B Nguyễn Chí Thanh",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "pizza",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g1/8918/prof/s640x400/foody-upload-api-foody-mobile-9b-2908222f-221019130749.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Lòng Heo Quê Đại Lộc - Cháo Lòng & Bún Lòng Xào Nghệ - 52 Ngô Chi Lan",
+        "address": {
+            "street": "52 Ngô Chi Lan",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "pizza",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g108/1076057/prof/s640x400/file_d5d9744d-42eb-4006-8e5b-236-80959ad7-220320085400.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Tiger Napoli Restaurant - 76 An Thượng 21",
+        "address": {
+            "street": "76 An Thượng 21",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "pizza",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g119/1186945/prof/s640x400/foody-upload-api-foody-mobile-im-dbce3492-231002184506.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Pizza - Gà Rán GenZ - Ngô Thì Nhậm",
+        "address": {
+            "street": "43A Ngô Thì Nhậm",
+            "district": "Quận Liên Chiểu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "pizza",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g107/1061292/prof/s640x400/file_restaurant_photo_esl1_16425-278b1b1f-220118173013.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Pizza - Gà Rán GenZ - Nguyễn Tất Thành",
+        "address": {
+            "street": "1159 Nguyễn Tất Thành",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "pizza",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g107/1061299/prof/s640x400/file_restaurant_photo_ur9u_16425-5e4fbca3-220118173219.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    }
+]

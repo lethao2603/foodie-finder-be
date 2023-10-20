@@ -1,0 +1,342 @@
+[
+    {
+        "deleted": "false",
+        "resname": "Umi Sushi - Ẩm Thực Nhật Bản - 267 Đống Đa",
+        "address": {
+            "street": "267 Đống Đa",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mon_nhat",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g114/1130747/prof/s640x400/file_restaurant_photo_tcha_16543-4130aba6-220604110043.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Naruto Ramen",
+        "address": {
+            "street": "59 An Thượng 4",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mon_nhat",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g106/1053281/prof/s640x400/foody-upload-api-foody-mobile-1-201029093854.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Fune Sushi - An Thượng 10",
+        "address": {
+            "street": "29 An Thượng 10",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mon_nhat",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g106/1058437/prof/s640x400/foody-upload-api-foody-mobile-70-201204110017.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Chin Meshi Dragon - Món Nhật",
+        "address": {
+            "street": "23 Thái Phiên",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mon_nhat",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g65/640282/prof/s640x400/foody-upload-api-foody-mobile-chin-meshi-dragon-mo-180621141930.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Pavo Cuisine & Mixology - Món Nhật - 11 Trần Phú",
+        "address": {
+            "street": "11  Trần Phú",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mon_nhat",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100004/1000035779/prof/s640x400/file_restaurant_photo_gehm_16353-c921c7fc-211027185721.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Takoyaki Da Nang - Món Ăn Nhật",
+        "address": {
+            "street": "2 Lê Lợi",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mon_nhat",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g74/731209/prof/s640x400/file_restaurant_photo_gfyq_16083-86c5a3c2-201219175856.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Haru & Sura - Món Ăn Nhật & Hàn - 44 Tạ Mỹ Duật",
+        "address": {
+            "street": "44 Tạ Mỹ Duật",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mon_nhat",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100004/1000034873/prof/s640x400/file_82fe6fc8-56d2-40f6-8504-a0e-b708a76e-211018110416.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "SHINYA Cơm Bò Kiểu Nhật - Món Quốc Tế - Tôn Đản",
+        "address": {
+            "street": "571 Tôn Đản",
+            "district": "Quận Cẩm Lệ",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mon_nhat",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100007/1000067043/prof/s640x400/file_170daa7d-4464-4572-9742-1d2-88c33064-230609124646.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Phiphi - Sushi Nhật & Hàn Food",
+        "address": {
+            "street": "41 Lê Hồng Phong",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mon_nhat",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g73/726393/prof/s640x400/foody-upload-api-foody-mobile-10-200714115117.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Nghiện Sushi - Đỗ Quang",
+        "address": {
+            "street": "53 Đỗ Quang",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mon_nhat",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g108/1075351/prof/s640x400/foody-upload-api-foody-mobile-177674250_1239615464-210425120152.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "KYOTO SUSHI Japanese Restaurant - Hệ Thống 4U For You",
+        "address": {
+            "street": "Lô 9 - 10 Võ Nguyên Giáp",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mon_nhat",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g78/770045/prof/s640x400/foody-upload-api-foody-mobile-seatalk_img_15832016-200303091526.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Phố Nướng Tokyo",
+        "address": {
+            "street": "4 Phạm Văn Đồng",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mon_nhat",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g22/214989/prof/s640x400/foody-upload-api-foody-mobile-15-190319145437.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Maruten - Sushi & Soba",
+        "address": {
+            "street": "127 Lê Quang Đạo",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mon_nhat",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g106/1053667/prof/s640x400/foody-upload-api-foody-mobile-122225957_1214050778-201110101224.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Phiphi - Sushi Nhật & Hàn Food - Shop Online",
+        "address": {
+            "street": "53B Đỗ Quang",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mon_nhat",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g108/1072183/prof/s640x400/file_restaurant_photo_zqjk_16177-8b0c63e3-210406201428.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Sushi Time - Coopmart",
+        "address": {
+            "street": "Tầng 1 Siêu Thị Coopmart - 478 Điện Biên Phủ",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mon_nhat",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g117/1164853/prof/s640x400/foody-upload-api-foody-mobile-fo-a570b1ad-230317110528.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Okami Sushi Foods - Ngô Gia Tự",
+        "address": {
+            "street": "117/16 Ngô Gia Tự",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mon_nhat",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g113/1120318/prof/s640x400/foody-upload-api-foody-mobile-im-88adc582-211208174509.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Tasty New York Restaurant - Sushi & Milktea",
+        "address": {
+            "street": "50 Thái Phiên",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mon_nhat",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g76/752054/prof/s640x400/foody-upload-api-foody-mobile-sushi-190103162310.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Michi Sushi",
+        "address": {
+            "street": "32 Thái Phiên",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mon_nhat",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g66/653398/prof/s640x400/foody-upload-api-foody-mobile-34-201009134705.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bushido Restaurant",
+        "address": {
+            "street": "90 Đường 2 Tháng 9",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mon_nhat",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g12/119072/prof/s640x400/foody-upload-api-foody-mobile-20-191008164949.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Fish Dance Cafe",
+        "address": {
+            "street": "32 Phan Bội Châu",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mon_nhat",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g71/702637/prof/s640x400/foody-upload-api-foody-mobile-25440330_51820873521-190408101205.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    }
+]

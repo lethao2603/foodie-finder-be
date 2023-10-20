@@ -1,0 +1,342 @@
+[
+    {
+        "deleted": "false",
+        "resname": "Bò Né Anh Tiamo - Bún Đậu - 9 Bàu Hạc 2",
+        "address": {
+            "street": "09 Bàu Hạc 2",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "beefsteak",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g28/271131/prof/s640x400/foody-upload-api-foody-mobile-9d-b5ad9f2e-230404121408.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Quán Ngon - Beefsteak",
+        "address": {
+            "street": "368 Đống Đa",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "beefsteak",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g21/200057/prof/s640x400/file_restaurant_photo_yorr_16386-03e9ea80-211205152142.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Vĩnh Tường - Beefsteak & Mì Ý",
+        "address": {
+            "street": "325/1A Hùng Vương",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "beefsteak",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g2/12717/prof/s640x400/foody-mobile-ma-jpg-835-635793161025487943.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Beefsteak Bò Con",
+        "address": {
+            "street": "Trần Khánh Dư",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "beefsteak",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g73/729704/prof/s640x400/file_restaurant_photo_rspe_16228-e574ddee-210605140846.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Tường - Pate & Beefsteak",
+        "address": {
+            "street": "4 Thanh Long",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "beefsteak",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g99/989343/prof/s640x400/foody-upload-api-foody-mobile-img_5312-191212171539.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Beefsteak 51 - Mai Hắc Đế",
+        "address": {
+            "street": "51 Mai Hắc Đế",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "beefsteak",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g5/43303/prof/s640x400/foody-mobile-la2-jpg-294-636125535213002918.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Lẩu Gà 76 - Lẩu Gà Lá É - 183 Tiểu La",
+        "address": {
+            "street": "183 Tiểu La",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "beefsteak",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g115/1141207/prof/s640x400/foody-upload-api-foody-mobile-la-78828d79-220623113601.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Saigon Brown Cafe & Eatery",
+        "address": {
+            "street": "Lô 02BT9 Tân Trào (Giao Với Nguyễn Viết Xuân)",
+            "district": "Quận Liên Chiểu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "beefsteak",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g86/857862/prof/s640x400/foody-upload-api-foody-mobile-7-191022142051.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Sushi Cá Hồi Cô Ba Đà Nẵng - Sushi Ngon & Giá Rẻ",
+        "address": {
+            "street": "K541/1 Núi Thành",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "beefsteak",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g114/1135627/prof/s640x400/file_restaurant_photo_jmdi_16591-19540015-220729221417.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Domino’s Pizza - 34 Nguyễn Văn Linh",
+        "address": {
+            "street": "32-34 Nguyễn Văn Linh",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "beefsteak",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g117/1166667/prof/s640x400/foody-upload-api-foody-mobile-im-9395faf7-230405164647.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Santori Food & Drinks - Trần Bạch Đằng",
+        "address": {
+            "street": "Lô 24 Trần Bạch Đằng",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "beefsteak",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g102/1015856/prof/s640x400/foody-upload-api-foody-mobile-24-tran-bach-dang-200330135252.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Domino’s Pizza - 294 Núi Thành",
+        "address": {
+            "street": "294 Núi Thành",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "beefsteak",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g117/1166669/prof/s640x400/foody-upload-api-foody-mobile-im-fda15746-230405165308.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "La Mer Coffee",
+        "address": {
+            "street": "221 Hồ Nghinh",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "beefsteak",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g95/949052/prof/s640x400/foody-upload-api-foody-mobile-img_3609-190819135748.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Cơm Healthy - Detox Drinks VyVy Quán",
+        "address": {
+            "street": "K41/H8/2 Đặng Thùy Trâm",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "beefsteak",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g108/1078115/prof/s640x400/foody-upload-api-foody-mobile-z2-b0ee9e1a-210512170046.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Phố Nướng Tokyo",
+        "address": {
+            "street": "4 Phạm Văn Đồng",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "beefsteak",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g22/214989/prof/s640x400/foody-upload-api-foody-mobile-15-190319145437.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Vi Lan Cafe",
+        "address": {
+            "street": "79 Lê Hồng Phong",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "beefsteak",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g1/8289/prof/s640x400/foody-upload-api-foody-mobile-vi-lan-cafe-jpg-180620151119.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "4U Boutique Restaurant & Beer",
+        "address": {
+            "street": "38 Pasteur",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "beefsteak",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g26/250866/prof/s640x400/foody-mobile-fo-2-jpg-893-636028985767252044.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Mỳ Xíu & Bò Né Cô Dương",
+        "address": {
+            "street": "316 Đống Đa",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "beefsteak",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g23/223714/prof/s640x400/file_restaurant_photo_nafb_16228-7f040b52-210605125642.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bò Né Khanh - Hoàng Văn Thụ",
+        "address": {
+            "street": "41 Hoàng Văn Thụ",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "beefsteak",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g1/6740/prof/s640x400/foody-upload-api-foody-mobile-bia-bo-ne-210204190111.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "La Grupa Steak & Seafood - Món Âu",
+        "address": {
+            "street": "Đường 2 Tháng 9",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "beefsteak",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100001/1000000043/prof/s640x400/foody-upload-api-foody-mobile-23-200422154711.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    }
+]

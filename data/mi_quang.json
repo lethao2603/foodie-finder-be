@@ -1,0 +1,342 @@
+[
+    {
+        "deleted": "false",
+        "resname": "Mì Quảng Bà Vị - Mì Quảng - Kiệt 74 Võ Văn Kiệt",
+        "address": {
+            "street": "K74/5 Võ Văn Kiệt",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mi_quang",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100006/1000051651/prof/s640x400/file_d95de786-e2a2-438b-83c3-7ed-cfde3a6c-220418202746.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Mì Quảng Gà - Nhà Quê",
+        "address": {
+            "street": "28 Mai Am",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mi_quang",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g117/1162264/prof/s640x400/foody-upload-api-foody-mobile-fi-7a384332-230218144119.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Mì Quảng Cô Nuôi - Ngô Quyền",
+        "address": {
+            "street": "908 Ngô Quyền (Ngã tư Nguyễn Công Trứ - Ngô Quyền)",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mi_quang",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g78/772475/prof/s640x400/foody-upload-api-foody-mobile-foody-mobile-ac-jpg--180822171659.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "BẾP MẸ MANH - Bún & Mì Quảng - Dũng Sĩ Thanh Khê",
+        "address": {
+            "street": "434 Dũng Sĩ Thanh Khê",
+            "district": "Quận Liên Chiểu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mi_quang",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100006/1000051737/prof/s640x400/file_restaurant_photo_idfx_16516-87f268e2-220504224949.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Nhà Nhím- Mỳ Quảng & Bún Mắm - Thủ Khoa Huân",
+        "address": {
+            "street": "02 Thủ Khoa Huân",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mi_quang",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g114/1137317/prof/s640x400/foody-upload-api-foody-mobile-fi-3ce492ac-220518150326.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bún Bò Mỳ Quảng Bà Lữ - 76 Nguyễn Văn Linh",
+        "address": {
+            "street": "76 Nguyễn Văn Linh",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mi_quang",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g112/1115871/prof/s640x400/file_restaurant_photo_sf4y_16366-bc00401c-211112134152.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Mì Quảng Ngon 199",
+        "address": {
+            "street": "199 Nguyễn Hoàng",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mi_quang",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g108/1074693/prof/s640x400/foody-upload-api-foody-mobile-miquangthapcamcover-210420154935.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Mì Quảng Phương - Phan Tứ",
+        "address": {
+            "street": "1 Phan Tứ",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mi_quang",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g1/8110/prof/s640x400/foody-mobile-my-quang-phuong.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Mì Quảng Sông Thu",
+        "address": {
+            "street": "56 Huỳnh Ngọc Huệ",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mi_quang",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g74/736835/prof/s640x400/foody-upload-api-foody-mobile-mqe-jpg-180427112244.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Cơm 68 - Phở, Mỳ Quảng & Hải Sản",
+        "address": {
+            "street": "194 Trần Bạch Đằng",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mi_quang",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100006/1000056765/prof/s640x400/file_d5c97bcd-1e28-4935-993c-afd-94b75457-220809183932.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "PIKACHU CHÁO ẾCH XÔI ẾCH MÌ QUẢNG HỦ TIẾU",
+        "address": {
+            "street": "133 Nguyễn Đức Trung",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mi_quang",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g99/981415/prof/s640x400/foody-upload-api-foody-mobile-chao-ech-191119105448.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Khủng Long Quán - Mì Quảng & Xôi - Ngô Chân Lưu",
+        "address": {
+            "street": "K36/4 Ngô Chân Lưu",
+            "district": "Quận Liên Chiểu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mi_quang",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100003/1000026932/prof/s640x400/file_fcc9d6ad-137e-4c1e-aafa-f99-308389b9-210604162131.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Mì Quảng & Bún Mắm Đặc Sản - K227/86b Nguyễn Văn Thoại",
+        "address": {
+            "street": "K227/86 Nguyễn Văn Thoại",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mi_quang",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100006/1000057144/prof/s640x400/file_8bd44065-a9a2-4bd7-ac3b-ac3-c18f94d3-220816150248.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Mì Quảng - Đặc Sản Hội An",
+        "address": {
+            "street": "45/3 Mai Hắc Đế",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mi_quang",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g107/1069028/prof/s640x400/foody-upload-api-foody-mobile-cv-210312163247.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Mỳ Quảng & Cà phê Ngân Long - 14 Mỹ Khê 1",
+        "address": {
+            "street": "14 Mỹ Khê 1",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mi_quang",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100007/1000069006/prof/s640x400/file_8ccbba64-57bf-4b8d-8c81-273-a039308e-230802134402.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bánh Mì Lagu & Mì Quảng - Huỳnh Thúc Kháng",
+        "address": {
+            "street": "180 Huỳnh Thúc Kháng",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mi_quang",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g64/631424/prof/s640x400/foody-mobile-foody-diem-tam-banh--825-636217105134943923.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Mì Quảng Phú Chiêm - 118 Phan Thanh",
+        "address": {
+            "street": "118 Phan Thanh",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mi_quang",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g103/1022033/prof/s640x400/foody-upload-api-foody-mobile-mi-quang-200507111706.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Quán Hồng - MÌ Quảng & Cao Lầu",
+        "address": {
+            "street": "462C Điện Biên Phủ",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mi_quang",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g93/926095/prof/s640x400/foody-upload-api-foody-mobile-hinh-mi-quang-tron-6-190604103112.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Mì Quảng Thu Bồn - Hoàng Thế Thiện",
+        "address": {
+            "street": "17 Hoàng Thế Thiện",
+            "district": "Quận Cẩm Lệ",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mi_quang",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g109/1084198/prof/s640x400/file_restaurant_photo_l0j1_16254-36cacdd3-210705090855.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Mỳ Quảng 43 - Châu Thượng Văn",
+        "address": {
+            "street": "43 Châu Thượng Văn",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "mi_quang",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g117/1168623/prof/s640x400/file_restaurant_photo_xow2_16942-222ac109-230909094721.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    }
+]

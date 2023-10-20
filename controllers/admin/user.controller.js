@@ -1,5 +1,6 @@
 const User = require("./../../models/user.model");
 const AppError = require("../../utils/appError.util").default;
+
 exports.getAllUsers = async (req, res) => {};
 
 exports.getUserById = async (req, res) => {};
