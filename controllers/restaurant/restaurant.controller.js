@@ -22,7 +22,8 @@ module.exports = {
         )
     },
     getRestaurantById: async (req, res) => {
-        let result = await useServices.getRestaurantById(req.query);
+        const id = req.params.id;
+        let result = await useServices.getRestaurantById(id);
         return res.status(200).json(
             {
                 EC: 0,

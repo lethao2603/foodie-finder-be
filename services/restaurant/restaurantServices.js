@@ -40,6 +40,7 @@ module.exports = {
   },
   getRestaurantById: async (id) => {
     let result = await Restaurant.findById(id).exec();
+    return result;
   },
   updateRestaurant: async (data) => {
     let result = await Restaurant.updateOne({ _id: data.id }, { ...data });
