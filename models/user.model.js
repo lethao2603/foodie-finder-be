@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
-
+const validator = require("validator");
 const roleSchema = new mongoose.Schema({
   //customer. admin, restaurant-owner
   name: {
@@ -17,19 +17,32 @@ const userSchema = new mongoose.Schema(
   {
     firstName: {
       type: String,
-      required: [true, "Frist name should not be empty!"],
+      required: [true, "First name should not be empty!"],
     },
     lastName: { type: String, required: [true, "Last name should not be empty!"] },
     email: {
       type: String,
       trim: true,
       index: { unique: true },
+      lowercase: true,
+      validate: [validator.isEmail, "Please enter a valid email"],
     },
     password: {
       type: String,
-      require: true,
-      min: 6,
+      require: [true, "Please provide a password"],
+      minlenght: 8,
     },
+    // passwordConfirm: {
+    //   type: String,
+    //   require: [true, "Please provide a password"],
+    //   validate: {
+    //     //This only works on CRETATE and SAVE
+    //     validator: function (el) {
+    //       return el === this.password;
+    //     },
+    //     message: "Password not the same",
+    //   },
+    // },
     photo: {
       type: String,
       default: "default.jpg",
@@ -40,7 +53,7 @@ const userSchema = new mongoose.Schema(
       default: true,
       select: false,
     },
-    verified: { type: Boolean, default: false},
+    verified: { type: Boolean, default: false },
   },
   {
     timestamps: true,

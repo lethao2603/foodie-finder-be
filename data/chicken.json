@@ -1,0 +1,342 @@
+[
+    {
+        "deleted": "false",
+        "resname": "CM Chicken - Gà Rán Hàn Quốc - Hồ Nghinh",
+        "address": {
+            "street": "170 Hồ Nghinh",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "chicken",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g101/1002322/prof/s640x400/file_restaurant_photo_45lj_16109-f57cc063-210118223315.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Vons Chicken - Gà Rán & Tokbokki - An Thượng 6",
+        "address": {
+            "street": "15 An Thượng 6",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "chicken",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g113/1121313/prof/s640x400/foody-upload-api-foody-mobile-an-54ac9d89-211215103321.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Chicken Bee - Bàu Tràm 2",
+        "address": {
+            "street": "11 Bàu Tràm 2",
+            "district": "Quận Cẩm Lệ",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "chicken",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g112/1113072/prof/s640x400/file_restaurant_photo_xtcv_16547-0860d7ad-220609103822.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Kang’s Chicken",
+        "address": {
+            "street": "31 Dương Tự Minh",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "chicken",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g105/1049274/prof/s640x400/foody-upload-api-foody-mobile-garanhhhghg-201002111227.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Korean Best Chicken - Gà Rán Hàn Quốc - 81 Đống Đa",
+        "address": {
+            "street": "81 Đống Đa",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "chicken",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100007/1000062837/prof/s640x400/file_60732d0e-bf51-4bf6-9061-1cf-0431f7d4-230302183117.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Crispy Pizza",
+        "address": {
+            "street": "131 Nguyễn Duy Hiệu",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "chicken",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g98/971293/prof/s640x400/foody-upload-api-foody-mobile-71539785_11988286274-191022141328.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Taco Ngon - Homemade Tortillas & Fresh Sauces",
+        "address": {
+            "street": "83 Hoàng Kế Viêm",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "chicken",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g76/753408/prof/s640x400/file_restaurant_photo_uykt_16419-260b5c2f-220111194356.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Boom Pizza",
+        "address": {
+            "street": "164 Tố Hữu",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "chicken",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g106/1055556/prof/s640x400/foody-upload-api-foody-mobile-150-201113134507.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Olivia Pizza",
+        "address": {
+            "street": "75 Ngô Thì Sỹ",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "chicken",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g106/1053866/prof/s640x400/foody-upload-api-foody-mobile-123246458_1046000414-201103104209.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Maazi Indian - Nhà Hàng Ấn Độ - 264 Trần Phú",
+        "address": {
+            "street": "264 Trần Phú",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "chicken",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100007/1000066736/prof/s640x400/file_587ecb50-9fc9-484f-a184-d74-60747929-230601112231.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Olivia Pizza & Coffee",
+        "address": {
+            "street": "309 Hồ Nghinh",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "chicken",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g116/1154387/prof/s640x400/foody-upload-api-foody-mobile-fo-b1d0ba1b-221027161133.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bánh Mì Cô Phượng - Trần Bạch Đằng",
+        "address": {
+            "street": "Đối Diện Khách Sạn Sunny Ocean",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "chicken",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100007/1000062163/prof/s640x400/file_4dbb3ed2-c5c3-46ac-a57b-76c-94f2185b-230209175502.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Phở 29 - Phở Hà Nội",
+        "address": {
+            "street": "1A Trần Quốc Toản",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "chicken",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g19/188816/prof/s640x400/foody-mobile-_mg_0149-jpg-873-635840413921097305.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bếp Ông Tá ( Professional Chef ) - Tô Hiến Thành",
+        "address": {
+            "street": "65/70 Tô Hiến Thành",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "chicken",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g117/1164455/prof/s640x400/foody-upload-api-foody-mobile-hi-e00f988c-230313205917.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Gordon's New York Pizza",
+        "address": {
+            "street": "57 An Thượng 2",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "chicken",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g106/1050907/prof/s640x400/file_restaurant_photo_3t04_16309-2784a6d8-210906105307.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Naruto Ramen",
+        "address": {
+            "street": "59 An Thượng 4",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "chicken",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g106/1053281/prof/s640x400/foody-upload-api-foody-mobile-1-201029093854.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "POETRY - Coffee & Restaurant",
+        "address": {
+            "street": "53B Nguyễn Chí Thanh",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "chicken",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g1/8918/prof/s640x400/foody-upload-api-foody-mobile-9b-2908222f-221019130749.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Fratello Pizza & Burger",
+        "address": {
+            "street": "83 Ngô Thì Sỹ",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "chicken",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g105/1048719/prof/s640x400/file_restaurant_photo_7xgg_16168-9de7ce95-210327155046.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Burger House - Dương Đình Nghệ",
+        "address": {
+            "street": "253 Dương Đình Nghệ",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "chicken",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g101/1003070/prof/s640x400/foody-upload-api-foody-mobile-999-200302143825.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Rosi Food & Coffee - Quán Bán Burger, Bánh Mì & Pasta - 240 Trần Bạch Đằng",
+        "address": {
+            "street": "240 Trần Bạch Đằng",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "chicken",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100008/1000070029/prof/s640x400/file_72083275-9028-4b60-b4cd-093-31f81bd7-230911202224.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    }
+]

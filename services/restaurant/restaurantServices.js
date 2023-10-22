@@ -59,13 +59,14 @@ module.exports = {
 
     let result = await Restaurant.find({
       $or: [
-        { resname: { $regex: search, $options: "i" } }, 
+        { resname: { $regex: search, $options: "i" } },
         { typeOfRes: { $regex: search, $options: "i" } },
         { "address.street": { $regex: search, $options: "i" } },
         { "address.district": { $regex: search, $options: "i" } },
-        { "address.province": { $regex: search, $options: "i" } }
-      ]
-    }).skip(offset)
+        { "address.province": { $regex: search, $options: "i" } },
+      ],
+    })
+      .skip(offset)
       .limit(limit)
       .exec();
 

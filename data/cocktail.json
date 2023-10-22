@@ -1,0 +1,342 @@
+[
+    {
+        "deleted": "false",
+        "resname": "Onjoo’s Kitchen - Kimbap Online",
+        "address": {
+            "street": "Lô 131 Khu Tái Định Cư Hoà Khánh Nam",
+            "district": "Quận Liên Chiểu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "cocktail",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g116/1157338/prof/s640x400/foody-upload-api-foody-mobile-1--2aa370d3-221130230139.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Hói's Pizza - Phan Châu Trinh",
+        "address": {
+            "street": "K307/4 Phan Châu Trinh",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "cocktail",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g102/1017650/prof/s640x400/foody-upload-api-foody-mobile-45-200601100907.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "The Pizza Company - Co.opMart Đà Nẵng",
+        "address": {
+            "street": "Tầng Trệt",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "cocktail",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g71/706160/prof/s640x400/image-bf227373-231012111313.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "The Pizza Company - Nguyễn Văn Thoại",
+        "address": {
+            "street": "173 Nguyễn Văn Thoại",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "cocktail",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g94/932909/prof/s640x400/image-8a0fac66-231012111307.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "The Pizza Company - 1 Nguyễn Văn Linh",
+        "address": {
+            "street": "1 Nguyễn Văn Linh",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "cocktail",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g115/1147099/prof/s640x400/image-79e15e21-231012111316.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Chè Mỹ - Phan Đăng Lưu",
+        "address": {
+            "street": "12 Phan Đăng Lưu",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "cocktail",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g98/974878/prof/s640x400/file_restaurant_photo_7idf_16036-4d8ac0f5-201025193538.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "FM Garden Coffee",
+        "address": {
+            "street": "80 Phạm Như Xương",
+            "district": "Quận Liên Chiểu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "cocktail",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g70/691037/prof/s640x400/foody-upload-api-foody-mobile-fm-jpg-180413112305.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Chè Kim Phụng - Chè, Sinh Tố & Trà Trái Cây - 518 Lê Văn Hiến",
+        "address": {
+            "street": "518 Lê Văn Hiến",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "cocktail",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g15/144077/prof/s640x400/foody-mobile-img_8522-3b225-jpg-197-636359836892875834.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Phong Cafe",
+        "address": {
+            "street": "205 Trưng Nữ Vương",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "cocktail",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g68/671765/prof/s640x400/foody-mobile-ph-jpg.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Hói Bán - Sushi - 74 Khúc Hạo",
+        "address": {
+            "street": "74 Khúc Hạo",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "cocktail",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100007/1000067659/prof/s640x400/file_d05044a1-b6e9-4687-9bfb-7d7-2c971aad-230626131431.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Trà Sữa Home's - Buffet Trà Sữa",
+        "address": {
+            "street": "70 Trịnh Công Sơn",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "cocktail",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g94/934885/prof/s640x400/foody-upload-api-foody-mobile-1-201119104749.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Chè Kim Phụng - Chè, Sinh Tố & Trà Trái Cây - 916 Ngô Quyền",
+        "address": {
+            "street": "916 Ngô Quyền",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "cocktail",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g119/1181065/prof/s640x400/foody-upload-api-foody-mobile-hi-9e1c5710-230814091836.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Great Day Coffee & Bread - D40 An Thượng",
+        "address": {
+            "street": "D40 An Thượng 34",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "cocktail",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100006/1000059618/prof/s640x400/file_b5d21f15-26e1-4c1b-9417-531-20e2bf73-221023163002.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Đỏ Đỏ - Hải Sản Tươi Sống & Bia Lạnh Nghéc 41- 43 Hồ Hán Thương",
+        "address": {
+            "street": "41 Hồ Hán Thương",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "cocktail",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g115/1148071/prof/s640x400/foody-upload-api-foody-mobile-ha-0fd16a97-220818084254.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Ken - Sushi - 52 Hoàng Văn Thụ",
+        "address": {
+            "street": "52 Hoàng Văn Thụ",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "cocktail",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100007/1000068250/prof/s640x400/file_e4e49581-da1f-41b9-a38f-96e-d565b6b3-230713094616.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Amazon Cafe - Đảo Xanh",
+        "address": {
+            "street": "Lô 5A4 Khu biệt thự Đảo Xanh",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "cocktail",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g1/8362/prof/s640x400/foody-mobile-mz-jpg-471-636344384365680455.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Pizza Oppa - Hồ Nghinh",
+        "address": {
+            "street": "291 Hồ Nghinh",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "cocktail",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g119/1186983/prof/s640x400/foody-upload-api-foody-mobile-ca-4c156e38-231003112015.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Nắng Cafe & Milktea",
+        "address": {
+            "street": "19A Hoàng Xuân Nhị",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "cocktail",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g77/766127/prof/s640x400/foody-upload-api-foody-mobile-ca-phe-den-da-viet-n-180803083421.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Chè Thái Duyên Nguyên - Đà Nẵng",
+        "address": {
+            "street": "532 Tôn Đức Thắng",
+            "district": "Quận Liên Chiểu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "cocktail",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g106/1057989/prof/s640x400/foody-upload-api-foody-mobile-270-201201171311.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Blue Whale - Restaurant & Bar",
+        "address": {
+            "street": "Lô 5 - 6 Võ Nguyên Giáp",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "cocktail",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g1/1014/prof/s640x400/foody-mobile-nng-jpg-275-636359946011889172.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    }
+]

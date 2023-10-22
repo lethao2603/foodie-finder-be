@@ -1,0 +1,342 @@
+[
+    {
+        "deleted": "false",
+        "resname": "Golden Star - Cafe & Món Việt - Trần Bạch Đằng",
+        "address": {
+            "street": "176 - 178 Trần Bạch Đằng",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "com_nieu",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100003/1000022656/prof/s640x400/file_restaurant_photo_thqm_16594-e605a96a-220803110032.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "KOMBO - Cơm Niêu Singapore - 265 Lê Thanh Nghị",
+        "address": {
+            "street": "265 Lê Thanh Nghị",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "com_nieu",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g118/1178575/prof/s640x400/foody-upload-api-foody-mobile-ca-7ead539f-230726134650.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Cơm Niêu Trúc Lâm Viên",
+        "address": {
+            "street": "10  Trần Quý Cáp",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "com_nieu",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g1/66/prof/s640x400/foody-upload-api-foody-mobile-com-191003134442.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Minh Tâm - Cơm Niêu & Cơm Đập",
+        "address": {
+            "street": "Lô 3A.2.5 Trần Thị Lý",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "com_nieu",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g24/230871/prof/s640x400/foody-mobile-mtam-2-jpg-130-635973733216261276.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Cơm Niêu Hồng Phúc",
+        "address": {
+            "street": "164 - 166 Nguyễn Tri Phương",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "com_nieu",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g1/5721/prof/s640x400/file_restaurant_photo_lg4f_16018-b8d54b79-201005161215.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Cơm Niêu 3 Cá Bống",
+        "address": {
+            "street": "112 Nguyễn Tri Phương",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "com_nieu",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g1/5791/prof/s640x400/foody-mobile-com-nieu-jpg-881-636407168084653834.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Cơm Niêu Cội Nguồn",
+        "address": {
+            "street": "160A Nguyễn Tri Phương",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "com_nieu",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g1/5771/prof/s640x400/foody-mobile-12118912_10564610610-163-635984738024319093.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Cơm Niêu Nhà Đỏ 2",
+        "address": {
+            "street": "86 Nguyễn Tri Phương",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "com_nieu",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g26/251363/prof/s640x400/foody-mobile-neiu-jpg-153-636028970073167488.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Cơm Niêu Huế Khang Garden",
+        "address": {
+            "street": "55 - 59 Hồ Nghinh",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "com_nieu",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g98/972086/prof/s640x400/foody-upload-api-foody-mobile-71786252_24678236934-191024095700.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Cơm Niêu PHAM BROS - Nướng Lẩu Lai Rai",
+        "address": {
+            "street": "45A Nguyễn Địa Lô",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "com_nieu",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100003/1000026535/prof/s640x400/foody-upload-api-foody-mobile-qu-c8b7d4e4-230914154801.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "PHỞ BẮC 54 - CƠM NIÊU VIỆT YẾN VY",
+        "address": {
+            "street": "120 Chính Hữu",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "com_nieu",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g117/1165354/prof/s640x400/foody-upload-api-foody-mobile-ph-08feb92d-230321161503.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Quán Chay Đại Bi",
+        "address": {
+            "street": "678 Đ. 2 Tháng 9",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "com_nieu",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g118/1176088/prof/s640x400/foody-upload-api-foody-mobile-25-e19a72cf-230712152421.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "BBQ Chicken - Gà rán Hàn Quốc -  Đà Nẵng",
+        "address": {
+            "street": "139 Nguyễn Văn Thoại",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "com_nieu",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g119/1184302/prof/s640x400/foody-upload-api-foody-mobile-fo-df21707e-230912114154.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Cơm Chay Đà Nẵng 3 - Hàm Nghi",
+        "address": {
+            "street": "K35/1 Hàm Nghi",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "com_nieu",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g95/941952/prof/s640x400/foody-upload-api-foody-mobile-img_5656-190724105259.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Phú Khang Restaurant & Cafe",
+        "address": {
+            "street": "50 Lê Kim Lăng",
+            "district": "Quận Cẩm Lệ",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "com_nieu",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g72/719941/prof/s640x400/foody-mobile-coffee-jpg.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Cơm sườn Đào Duy Từ - 26 Hải Phòng",
+        "address": {
+            "street": "26 Hải Phòng",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "com_nieu",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g115/1147380/prof/s640x400/foody-upload-api-foody-mobile-z3-be138fdd-220817134944.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Trúc Lâm Viên Cafe & Restaurant",
+        "address": {
+            "street": "8 Trần Quý Cáp",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "com_nieu",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g1/3232/prof/s640x400/file_restaurant_photo_j0r5_16146-a07460ae-210302082058.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Cơm Quê Má Hai - 35 Trưng Nữ Vương",
+        "address": {
+            "street": "35 Trưng Nữ Vương",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "com_nieu",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g119/1184491/prof/s640x400/foody-upload-api-foody-mobile-hi-ef78a4db-230913125023.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Han's Bbq - Phan Liêm",
+        "address": {
+            "street": "Lô 51 Phan Liêm",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "com_nieu",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g102/1015840/prof/s640x400/foody-upload-api-foody-mobile-han-200330123452.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Chay Tâm Phúc",
+        "address": {
+            "street": "132A Quang Trung",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "com_nieu",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g108/1073276/prof/s640x400/foody-upload-api-foody-mobile-bunhuechaycover-210412152240.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    }
+]

@@ -1,6 +1,7 @@
 const { signAccessToken, signRefreshToken } = require("../utils/auth.util");
 const User = require("./../models/user.model");
 const AppError = require("../utils/appError.util");
+const { readJSONFile } = require("../data/fileUtils");
 const {
   CLIENT_ERROR_MESSAGE,
   CLIENT_BASE_URL,
@@ -10,18 +11,19 @@ const Token = require("../models/token.model");
 const crypto = require("crypto");
 const sendMail = require("../utils/sendMail.util");
 const { getVerifyEmailTemplate } = require("../utils/helper.util");
+const Menu = require("../models/menu.model");
+const Restaurant = require("../models/restaurant.model");
 exports.register = async (req, res, next) => {
   try {
     const newUser = await User.create(req.body);
     newUser.password = undefined;
-
     const token = await new Token({
       userId: newUser._id,
       token: crypto.randomBytes(32).toString("hex"),
     }).save();
     const url = `${CLIENT_BASE_URL}/user/${newUser._id}/verify/${token.token}`;
     await sendMail(newUser.email, EMAIL_VERIFY_SUBJECT, getVerifyEmailTemplate(url));
-    res.status(200).send({
+    res.status(201).send({
       status: "success",
       data: {
         user: newUser,
@@ -29,6 +31,15 @@ exports.register = async (req, res, next) => {
       },
     });
   } catch (err) {
+    // res.status(400).json({
+    //   status: "fail",
+    //   message: err,
+    // });
+    // console.log(err.message);
+    if (!err.isOperational) {
+      err = new AppError(404, "fail", undefined, err.message);
+    }
+    // console.log(err);
     next(err);
   }
 };
@@ -43,6 +54,9 @@ exports.login = async (req, res, next) => {
     const userDb = await User.findOne({ email: email }).select("+password");
     if (!userDb) {
       throw new AppError(404, "fail", "ERR_LOGIN_2", CLIENT_ERROR_MESSAGE.ERR_LOGIN_2);
+    }
+    if (!userDb.verified) {
+      throw new AppError(404, "fail", undefined, "Email not verified");
     }
     if (!(await User.compare(password, userDb.password))) {
       throw new AppError(404, "fail", "ERR_LOGIN_3", CLIENT_ERROR_MESSAGE.ERR_LOGIN_3);
@@ -90,3 +104,23 @@ exports.verifyLink = async (req, res, next) => {
 exports.logout = async (req, res, next) => {};
 
 exports.refreshToken = async (req, res, next) => {};
+exports.insertData = async (req, res, next) => {
+  console.log("a");
+
+  const dataMenu = readJSONFile(`Menu_${req.params.category}.json`);
+  const dataRes = readJSONFile(`${req.params.category}.json`);
+  for (let i = 0; i < dataMenu.length; i++) {
+    // Goi ham insert
+    const newMenu = await Menu.create(dataMenu[i]);
+    const menu_id = newMenu._id;
+    const res = {
+      ...dataRes[i],
+      resMenuInfor: menu_id,
+    };
+    // console.log(res.resname);
+    const newRes = await Restaurant.create(res);
+  }
+  res.status(200).send({
+    status: "success",
+  });
+};
