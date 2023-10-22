@@ -1,3 +1,4 @@
+const { response } = require("express");
 const Restaurant = require("../../models/restaurant.model");
 
 const aqp = require("api-query-params");
@@ -56,9 +57,8 @@ module.exports = {
     const { filter, limit } = aqp(queryString);
     let offset = (page - 1) * limit;
     delete filter.page;
-
     let result = await Restaurant.find({
-      $or: [
+       $or: [
         { resname: { $regex: search, $options: "i" } },
         { typeOfRes: { $regex: search, $options: "i" } },
         { "address.street": { $regex: search, $options: "i" } },

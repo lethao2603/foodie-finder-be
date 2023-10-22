@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 const { query } = require('express');
 
 const router = require('express').Router();
-=======
-const router = require("express").Router();
->>>>>>> 702ca013e813f6f4f8447be029ea0f35ec352d5d
 // router.use('/test', require('./test.route'));
 // router.use("/admin/users", require("./admin/user.route"));
 router.use("/auth", require("./auth.route"));
