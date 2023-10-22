@@ -4,7 +4,7 @@ const mongoose_delete = require('mongoose-delete');
 const { DateTime } = require('mssql');
 
 const restaurantSchema = new mongoose.Schema({
-    resname: {type: String,required: true},
+    resname: {type: String,required: true, },
     address: {
         street: {type: String,required: true},
         district: {type: String,required: true},

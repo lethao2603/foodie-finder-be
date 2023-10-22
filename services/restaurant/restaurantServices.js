@@ -38,6 +38,10 @@ module.exports = {
     result = await Restaurant.find(filter).populate(population).skip(offset).limit(limit).exec();
     return result;
   },
+  getRestaurantById: async (id) => {
+    let result = await Restaurant.findById(id).exec();
+  },
+
   updateRestaurant: async (data) => {
     let result = await Restaurant.updateOne({ _id: data.id }, { ...data });
     return result;

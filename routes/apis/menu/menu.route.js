@@ -10,6 +10,4 @@ routeAPI.post('/create', MenuController.postCreateMenu);
 //routeAPI.put('/update',  MenuController.postCreateMenu);
 //routeAPI.put('/delete',  MenuController.postCreateMenu);
 
-
-
 module.exports = routeAPI;
