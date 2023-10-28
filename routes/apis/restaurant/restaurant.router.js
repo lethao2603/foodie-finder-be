@@ -10,5 +10,6 @@ routeAPI.get("/:id", RestaurantController.getRestaurantById);
 routeAPI.post("/create", RestaurantController.postCreateRestaurant);
 routeAPI.put("/update", RestaurantController.putUpdateRestaurant);
 routeAPI.delete("/delete", RestaurantController.deleteDelRestaurant);
+routeAPI.get("/category/:cateName", RestaurantController.getRestaurantByCategory);
 
 module.exports = routeAPI;

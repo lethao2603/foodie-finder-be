@@ -1,5 +1,6 @@
 const { response } = require("express");
 const Restaurant = require("../../models/restaurant.model");
+const Category = require("../../models/category.model");
 
 const aqp = require("api-query-params");
 
@@ -36,7 +37,7 @@ module.exports = {
     const { filter, limit } = aqp(queryString);
     let offset = (page - 1) * limit;
     delete filter.page;
-    result = await Restaurant.find(filter).populate(population).skip(offset).limit(limit).exec();
+    result = await Restaurant.find(filter).populate('resCateInfor').skip(offset).limit(limit).exec();
     return result;
   },
   getRestaurantById: async (id) => {
@@ -73,4 +74,13 @@ module.exports = {
 
     return result;
   },
+  getResByCatgory: async (cateName) => {
+    const category = await Category.findOne({ categoryName: cateName });
+    if (category) {
+      result = await Restaurant.find({ resCateInfor: category._id });
+    } else {
+      result = [];
+    }
+    return result;
+  }
 };

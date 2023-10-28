@@ -19,10 +19,8 @@ const restaurantSchema = new mongoose.Schema({
     description: String,
     image: String,
     resMenuInfor: { type: mongoose.Schema.Types.ObjectId, ref: "menu", default: "Undefined" },
-    //resCateInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'restaurantCategories'},
+    resCateInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'category',default: "Undefined" },
     //resOwnerInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'users'},
-    // reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: 'reviews'}],
-    // reservations: [{type: mongoose.Schema.Types.ObjectId, ref: 'reservations'}],
   },
   { timestamps: true } // createAt, updateAt
 );

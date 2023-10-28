@@ -65,5 +65,16 @@ module.exports = {
                 data: result
             }
         ) 
+    },
+    getRestaurantByCategory: async (req, res) => {
+        const cateName = req.params.cateName;
+        let result = await useServices.getResByCatgory(cateName);
+        return res.status(200).json(
+            {
+                EC: 0,
+                data: result
+            }
+        )
     }
+
 }
