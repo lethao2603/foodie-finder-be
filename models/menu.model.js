@@ -4,10 +4,6 @@ const mongoose_delete = require("mongoose-delete");
 //shape data
 const menuSchema = new mongoose.Schema(
   {
-    deleted: {
-      type: "boolean",
-      default: false,
-    },
     items: [
       {
         name: String,

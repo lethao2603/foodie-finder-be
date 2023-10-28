@@ -10,7 +10,7 @@ const fileUpload = require('express-fileupload');
 
 const app = express();
 const globalErrorHandler = require("../controllers/globalError.controller");
-const apiRoutes = (require("./../routes/index"));
+const apiRoutes = require("./../routes/index");
 // Allow Cross-Origin requests
 app.use(cors());
 // Set security HTTP headers

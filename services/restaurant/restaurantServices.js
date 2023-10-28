@@ -40,7 +40,8 @@ module.exports = {
     return result;
   },
   getRestaurantById: async (id) => {
-    let result = await Restaurant.findById(id).exec();
+    //const population = queryString.populate;
+    let result = await Restaurant.findById(id).populate('resMenuInfor').exec();
     return result;
   },
   updateRestaurant: async (data) => {

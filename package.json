@@ -23,6 +23,8 @@
     "express-rate-limit": "^5.0.0",
     "helmet": "^3.21.2",
     "hpp": "^0.2.2",
+    "http-status-codes": "^2.3.0",
+    "joi": "17.7.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.13.20",
     "mongoose-delete": "0.5.4",
