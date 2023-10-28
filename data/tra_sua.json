@@ -1,0 +1,342 @@
+[
+    {
+        "deleted": "false",
+        "resname": "Trà Sữa Umacha - Nguyễn Văn Thoại",
+        "address": {
+            "street": "85 Nguyễn Văn Thoại",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "tra_sua",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g107/1063345/prof/s640x400/file_restaurant_photo_dtgg_16141-bc4c5b2f-210224114507.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Trà Sữa, Mỳ Cay & Ăn Vặt Poc Poc",
+        "address": {
+            "street": "184 Phan Đăng Lưu",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "tra_sua",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g71/708566/prof/s640x400/foody-upload-api-foody-mobile-pp1-190426084631.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Trà Sữa Umacha - Núi Thành",
+        "address": {
+            "street": "438 Núi Thành",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "tra_sua",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g112/1113051/prof/s640x400/foody-upload-api-foody-mobile-um-938551b1-211026172245.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Trà Sữa Ông Thọ - Lê Duẩn",
+        "address": {
+            "street": "1B Lê Duẩn",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "tra_sua",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g116/1157454/prof/s640x400/foody-upload-api-foody-mobile-z3-9c22e9c7-221202090028.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Ali Cafe & Trà Sữa - Ngô Văn Sở",
+        "address": {
+            "street": "9 Ngô Văn Sở",
+            "district": "Quận Liên Chiểu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "tra_sua",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g105/1047395/prof/s640x400/foody-upload-api-foody-mobile-cafedfdgdfgddkk-200918171841.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "BandB - Cafe & Trà Sữa - Dũng Sĩ Thanh Khê",
+        "address": {
+            "street": "91A Dũng Sĩ Thanh Khê",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "tra_sua",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100001/1000001717/prof/s640x400/file_cfb2cebb-3c2f-4c10-b463-9da-98b29a46-201222095830.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Trà Sữa Ông Nội Quán - Ông Ích Khiêm",
+        "address": {
+            "street": "273 Ông Ích Khiêm",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "tra_sua",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g65/643086/prof/s640x400/foody-upload-api-foody-mobile-seatalk_img_15892586-200512115130.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Diamond Milktea - Trà Sữa & Ăn Vặt",
+        "address": {
+            "street": "479 Núi Thành",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "tra_sua",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g23/223482/prof/s640x400/foody-upload-api-foody-mobile-2b8903a1-e2f0-4c0c-8-191104145040.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Trà Sữa Bánh Tráng Nướng Bin Happy",
+        "address": {
+            "street": "4 An Nhơn 7",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "tra_sua",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g118/1170535/prof/s640x400/file_restaurant_photo_0zzv_16841-e415833f-230515205233.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Trà Sữa - Sinh Tố & Nước Ép Cường Mojito",
+        "address": {
+            "street": "80 Trưng Nữ Vương",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "tra_sua",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g14/139217/prof/s640x400/file_restaurant_photo_p6fu_16736-ecabb00f-230113173725.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Panda - Trà Sữa, Trà Chanh & Cafe",
+        "address": {
+            "street": "06 Hải Phòng",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "tra_sua",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g107/1061322/prof/s640x400/foody-upload-api-foody-mobile-tra-chanh-201223132331.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "May Hotpot - Trà Sữa - Ăn Vặt - Mỳ Cay",
+        "address": {
+            "street": "18 Nguyễn Chánh",
+            "district": "Quận Liên Chiểu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "tra_sua",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100/990090/prof/s640x400/file_restaurant_photo_afzz_16065-2b7f8336-201128074655.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Pilot Cafe - Trà Sữa & Trà Chanh",
+        "address": {
+            "street": "143A Nguyễn Chí Thanh",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "tra_sua",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g107/1062587/prof/s640x400/file_restaurant_photo_5wpq_16099-dbe7d519-210106113019.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bqueen - Trà Sữa & Ăn Vặt",
+        "address": {
+            "street": "3 Nguyễn Thành Ý",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "tra_sua",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g95/948546/prof/s640x400/foody-upload-api-foody-mobile-7-200513111635.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bee Coffee & Tea - Trà Sữa, Ăn Vặt & Trà Mãng Cầu",
+        "address": {
+            "street": "143 Phạm Hùng",
+            "district": "Quận Cẩm Lệ",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "tra_sua",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g118/1171137/prof/s640x400/foody-upload-api-foody-mobile-a7-10c7681f-230519110047.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Thái Bảo - Cafe & Trà Sữa",
+        "address": {
+            "street": "168 Lương Nhữ Hộc",
+            "district": "Quận Cẩm Lệ",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "tra_sua",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g23/222709/prof/s640x400/file_restaurant_photo_iekk_16161-d07b1119-210319153635.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Trà Sữa Boba Cups",
+        "address": {
+            "street": "105 Đồng Kè",
+            "district": "Quận Liên Chiểu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "tra_sua",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g105/1046719/prof/s640x400/foody-upload-api-foody-mobile-1-200925175848.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Trà Sữa NaCo",
+        "address": {
+            "street": "Đường Mai Đăng Chơn",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "tra_sua",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g104/1038541/prof/s640x400/file_restaurant_photo_m4y0_16540-73299720-220531200447.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "MONCHA - Trà Dâu & Trà Sữa - 90 Nguyễn Chích",
+        "address": {
+            "street": "90 Nguyễn Chích",
+            "district": "Quận Liên Chiểu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "tra_sua",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100006/1000056347/prof/s640x400/file_a47e9f13-1929-4965-912f-354-034e19c8-220802145217.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Trà Sữa Aloha",
+        "address": {
+            "street": "115 Nguyễn Huy Tưởng",
+            "district": "Quận Liên Chiểu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "tra_sua",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g108/1070796/prof/s640x400/foody-upload-api-foody-mobile-foody-upload-api-foo-210326141641.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    }
+]

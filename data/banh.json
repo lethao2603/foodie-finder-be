@@ -1,0 +1,342 @@
+[
+    {
+        "deleted": "false",
+        "resname": "Bánh Tráng Tắc Ớt",
+        "address": {
+            "street": "40/31 Phan Thanh",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "banh",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g78/774552/prof/s640x400/foody-upload-api-foody-mobile-2018817211239-banh-t-180830105127.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bánh Gà Thần Thánh Hà Nội - Nguyễn Trãi",
+        "address": {
+            "street": "68/05 Nguyễn Trãi",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "banh",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g117/1167392/prof/s640x400/file_restaurant_photo_nelb_16831-bb6e2254-230503150349.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Ăn Vặt & Bánh Tráng Siêu Xịn",
+        "address": {
+            "street": "5-7 Hoàng Công Chất",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "banh",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g116/1153180/prof/s640x400/foody-upload-api-foody-mobile-fo-668a98d8-221012131900.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bánh Mì Hạnh Phúc",
+        "address": {
+            "street": "346 Hoàng Diệu",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "banh",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g12/114612/prof/s640x400/foody-mobile-hp-jpg-813-636358869453651221.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bánh Mì Ép HB - An Thượng 30",
+        "address": {
+            "street": "36 An Thượng 30",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "banh",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g24/233360/prof/s640x400/foody-upload-api-foody-mobile-img_6519-190705175057.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bánh Mì Ép HB - Nguyễn Văn Thoại",
+        "address": {
+            "street": "128 Nguyễn Văn Thoại (Đối Diện Nhà Hàng Hải Sản Cua Đỏ)",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "banh",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g88/870587/prof/s640x400/foody-upload-api-foody-mobile-banh-mi-ep-1-jpg-181224134856.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bánh Canh Gia Truyền Bà Bé Chợ Cồn - Bãi Giữ Xe Cổng Chợ Cồn",
+        "address": {
+            "street": "Bên Cạnh 269 Ông Ích Khiêm",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "banh",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g94/935310/prof/s640x400/foody-upload-api-foody-mobile-28011c60-7520-4e39-8-190702173730.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bánh Mì Bảo Tiên",
+        "address": {
+            "street": "93 Hải Hồ",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "banh",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g94/935858/prof/s640x400/foody-upload-api-foody-mobile-9999-190704102547.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bánh Mỳ Bà Tứ",
+        "address": {
+            "street": "Ngã Tư Phan Tứ - Ngũ Hành Sơn",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "banh",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g89/882842/prof/s640x400/foody-upload-api-foody-mobile-20150108104437-1-190118103833.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bánh Mì Heo Quay Ty - Chợ Cồn",
+        "address": {
+            "street": "Ngã 4 Ông Ích Khiêm - Hùng Vương",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "banh",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g89/885771/prof/s640x400/foody-upload-api-foody-mobile-banh-mi-190130092705.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bánh Canh Đèn Dầu - Bánh Canh & Bánh Chất Huế - 259 Khúc Hạo",
+        "address": {
+            "street": "259 Khúc Hạo",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "banh",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100008/1000070537/prof/s640x400/file_20c0403d-300d-445e-97ab-018-6f80834f-230929121118.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bánh Lọc & Bánh Nậm Dì Trang - Hà Thị Thân",
+        "address": {
+            "street": "17A Hà Thị Thân",
+            "district": "Quận Sơn Trà",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "banh",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g118/1179365/prof/s640x400/foody-upload-api-foody-mobile-c--8e1cca79-230802115537.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bánh Canh Cá Nục Nhi 1 - 39 Tố Hữu",
+        "address": {
+            "street": "39 Tố Hữu",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "banh",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g106/1050096/prof/s640x400/file_restaurant_photo_efpw_16022-63ce686d-201009111131.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bánh Xèo Bà Dưỡng",
+        "address": {
+            "street": "K280/23 Hoàng Diệu",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "banh",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g1/6081/prof/s640x400/file_restaurant_photo_ales_16012-c627fb1d-200928162157.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bánh Tráng Cô Thê",
+        "address": {
+            "street": "381 Nguyễn Văn Linh",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "banh",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g89/888066/prof/s640x400/foody-upload-api-foody-mobile-co-the-190218121227.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Thìn - Bánh Mì Heo Nướng Lu & Cafe Muối - Nguyễn Hoàng",
+        "address": {
+            "street": "360 Nguyễn Hoàng",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "banh",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g106/1058063/prof/s640x400/file_restaurant_photo_lrh8_16357-d5d7169a-211101172532.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bánh Tráng Thịt Heo Hương Đại Lộc",
+        "address": {
+            "street": "625 Tôn Đức Thắng",
+            "district": "Quận Liên Chiểu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "banh",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g14/133464/prof/s640x400/foody-mobile-huong-jpg.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Chin's Kitchen - Bánh Mì & Gỏi Cuốn",
+        "address": {
+            "street": "154 Lê Đình Dương",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "banh",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g75/749558/prof/s640x400/foody-upload-api-foody-mobile-chin-jpg-180705170743.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bánh Canh Cá Lóc Yến - Hoàng Hoa Thám",
+        "address": {
+            "street": "110 Hoàng Hoa Thám",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "banh",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g114/1135403/prof/s640x400/foody-upload-api-foody-mobile-fo-cf755e5e-220429092314.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bánh Canh Cá Nục Nhi 3 - 338 Ông Ích Khiêm",
+        "address": {
+            "street": "338 Ông Ích Khiêm",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "banh",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g117/1168254/prof/s640x400/foody-upload-api-foody-mobile-an-5cac5d86-230418181410.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    }
+]
