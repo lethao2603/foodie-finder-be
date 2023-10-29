@@ -7,7 +7,7 @@ const port = SERVER_PORT || 5000;
     let x = 5;
     console.log(x);
     await require("./config/db").connect();
-    app.listen(port, () => {
+    app.listen(port, "0.0.0.0", () => {
       console.log(`Application is running on port ${port}`);
     });
   } catch (err) {
