@@ -1,8 +1,8 @@
-const { SERVER_PORT } = require("./constants/config.constant.js");
+const { PORT } = require("./constants/config.constant.js");
 const app = require("./libs/express.lib.js");
-const port = SERVER_PORT || 3000;
+const port = PORT || 3000;
 
-(async () => {
+async function run() {
   try {
     let x = 5;
     console.log(x);
@@ -13,4 +13,6 @@ const port = SERVER_PORT || 3000;
   } catch (err) {
     console.log(err);
   }
-})();
+}
+
+run();
