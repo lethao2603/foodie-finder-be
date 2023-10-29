@@ -1,6 +1,6 @@
 const dotenv = require("dotenv");
 dotenv.config({
-  path: "config.env",
+  path: ".env",
 });
 
 const SERVER_HOSTNAME = process.env.SERVER_HOSTNAME;
