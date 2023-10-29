@@ -1,6 +1,6 @@
 const { SERVER_PORT } = require("./constants/config.constant.js");
 const app = require("./libs/express.lib.js");
-const port = SERVER_PORT || 5000;
+const port = SERVER_PORT || 3000;
 
 (async () => {
   try {
