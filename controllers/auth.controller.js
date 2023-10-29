@@ -21,12 +21,12 @@ exports.register = async (req, res, next) => {
       userId: newUser._id,
       token: crypto.randomBytes(32).toString("hex"),
     }).save();
-    const url = `${CLIENT_BASE_URL}/user/${newUser._id}/verify/${token.token}`;
+    const url = `${CLIENT_BASE_URL}/verify?code=${newUser._id}-${token.token}`;
     await sendMail(newUser.email, EMAIL_VERIFY_SUBJECT, getVerifyEmailTemplate(url));
     res.status(201).send({
       status: "success",
       data: {
-        user: newUser,
+        // user: newUser,
         message: "An email sent to your account, please verify",
       },
     });
@@ -61,16 +61,16 @@ exports.login = async (req, res, next) => {
     if (!(await User.compare(password, userDb.password))) {
       throw new AppError(404, "fail", "ERR_LOGIN_3", CLIENT_ERROR_MESSAGE.ERR_LOGIN_3);
     }
-
+    console.log(password, userDb.password);
     const token = signAccessToken(userDb);
     userDb.password = undefined;
 
     res.status(200).send({
       status: "success",
       token,
-      data: {
-        user: userDb,
-      },
+      // data: {
+      //   user: userDb,
+      // },
     });
   } catch (err) {
     next(err);
@@ -94,6 +94,7 @@ exports.verifyLink = async (req, res, next) => {
     await token.remove();
 
     res.status(200).send({
+      status: "success",
       message: "Email verified successfully",
     });
   } catch (err) {
@@ -102,11 +103,8 @@ exports.verifyLink = async (req, res, next) => {
 };
 
 exports.logout = async (req, res, next) => {};
-
 exports.refreshToken = async (req, res, next) => {};
 exports.insertData = async (req, res, next) => {
-  console.log("a");
-
   const dataMenu = readJSONFile(`Menu_${req.params.category}.json`);
   const dataRes = readJSONFile(`${req.params.category}.json`);
   for (let i = 0; i < dataMenu.length; i++) {

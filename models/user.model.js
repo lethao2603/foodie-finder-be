@@ -1,18 +1,6 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const validator = require("validator");
-const roleSchema = new mongoose.Schema({
-  //customer. admin, restaurant-owner
-  name: {
-    type: String,
-    required: true,
-  },
-
-  description: {
-    type: String,
-  },
-});
-
 const userSchema = new mongoose.Schema(
   {
     firstName: {
@@ -20,6 +8,7 @@ const userSchema = new mongoose.Schema(
       required: [true, "First name should not be empty!"],
     },
     lastName: { type: String, required: [true, "Last name should not be empty!"] },
+    phone: { type: String, required: [true, "Phone should not be empty!"] },
     email: {
       type: String,
       trim: true,
@@ -47,7 +36,12 @@ const userSchema = new mongoose.Schema(
       type: String,
       default: "default.jpg",
     },
-    role: roleSchema,
+    role: {
+      type: String,
+      enum: ["admin", "customer", "restaurant-owner"],
+      required: true,
+      default: "customer",
+    },
     active: {
       type: Boolean,
       default: true,

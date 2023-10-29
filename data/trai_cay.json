@@ -1,0 +1,342 @@
+[
+    {
+        "deleted": "false",
+        "resname": "Nước Ép Trái Cây Tươi & Trà Các Loại - KU NOO",
+        "address": {
+            "street": "220 Hàn Thuyên",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "trai_cay",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g118/1179889/prof/s640x400/foody-upload-api-foody-mobile-fd-d0669759-230806163433.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Cà Phê & Trà Trái Cây Tươi Nhà Lâm",
+        "address": {
+            "street": "425 Nguyễn Phước Nguyên",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "trai_cay",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g117/1168690/prof/s640x400/foody-upload-api-foody-mobile-ca-a3485907-230422135512.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Kaki Quán - Trà Trái Cây, Ăn Vặt, Gỏi Cuốn & Chân Gà - 280 Hải Phòng",
+        "address": {
+            "street": "280 Hải Phòng",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "trai_cay",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g118/1172362/prof/s640x400/foody-upload-api-foody-mobile-ba-4f01466d-230530112150.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Meo Meo - Trà Sữa & Cà Phê, Trái Cây Gọt Sẵn - Trần Đức Thảo",
+        "address": {
+            "street": "94 Trần Đức Thảo",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "trai_cay",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100007/1000062941/prof/s640x400/foody-upload-api-foody-mobile-co-18dd50ea-230519185003.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Tiệm Trà Trong Hẻm - Trà Sữa, Trà Trái Cây & Ăn Hàng 24h - Thanh Thuỷ",
+        "address": {
+            "street": "98B Thanh Thuỷ",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "trai_cay",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g100007/1000063092/prof/s640x400/file_2e3f3861-95cf-48e2-ac49-4c0-44b34e05-230309001616.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Ủ Mưu Cafe Muối - Trà Trái Cây, Sinh Tố - Giải Khát - 95 Nguyễn Khánh Toàn",
+        "address": {
+            "street": "95 Nguyễn Khánh Toàn",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "trai_cay",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g117/1168373/prof/s640x400/foody-upload-api-foody-mobile-co-8529c3a6-230420085324.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Bánh Tráng Tắc Ớt",
+        "address": {
+            "street": "40/31 Phan Thanh",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "trai_cay",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g78/774552/prof/s640x400/foody-upload-api-foody-mobile-2018817211239-banh-t-180830105127.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Ăn Vặt & Bánh Tráng Siêu Xịn",
+        "address": {
+            "street": "5-7 Hoàng Công Chất",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "trai_cay",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g116/1153180/prof/s640x400/foody-upload-api-foody-mobile-fo-668a98d8-221012131900.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Xôi 9Life - 380 Hùng Vương",
+        "address": {
+            "street": "380 Hùng Vương",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "trai_cay",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g118/1173807/prof/s640x400/foody-upload-api-foody-mobile-ca-7142ac32-230630074311.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Diamond Milktea - Trà Sữa & Ăn Vặt",
+        "address": {
+            "street": "479 Núi Thành",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "trai_cay",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g23/223482/prof/s640x400/foody-upload-api-foody-mobile-2b8903a1-e2f0-4c0c-8-191104145040.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Asagi Store - Trái Cây Sạch",
+        "address": {
+            "street": "38 Lê Vĩnh Khanh",
+            "district": "Quận Cẩm Lệ",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "trai_cay",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g65/648477/prof/s640x400/foody-upload-api-foody-mobile-img_0374-190705151807.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Trái Cây Tia Chớp",
+        "address": {
+            "street": "H10/11 K123 Cù Chính Lan",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "trai_cay",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g101/1003389/prof/s640x400/foody-upload-api-foody-mobile-2b85dc57-30f6-40f4-b-200409180054.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Trạm Vitamin - Nước Ép Trái Cây Tươi",
+        "address": {
+            "street": "08 Bình Minh 1",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "trai_cay",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g93/928871/prof/s640x400/foody-upload-api-foody-mobile-3-200708091530.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Sơri - Nước Ép Trái Cây, Sinh Tố & Ăn Vặt",
+        "address": {
+            "street": "185/5 Hoàng Diệu",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "trai_cay",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g96/956735/prof/s640x400/foody-upload-api-foody-mobile-c__media_temp-_-food-190916103625.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Asagi Store - Trái Cây Sạch - Nguyễn Tri Phương",
+        "address": {
+            "street": "199 Nguyễn Tri Phương",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "trai_cay",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g103/1023220/prof/s640x400/foody-upload-api-foody-mobile-foody-upload-api-foo-200514091844.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Sơri Cơ Sở 2 - Nước Ép Trái Cây, Sinh Tố & Ăn Vặt",
+        "address": {
+            "street": "242 Hoàng Diệu",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "trai_cay",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g114/1138202/prof/s640x400/foody-upload-api-foody-mobile-an-df155c73-220526174542.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "KinKin - Nước Ép Trái Cây",
+        "address": {
+            "street": "190 Châu Thị Vĩnh Tế",
+            "district": "Quận Ngũ Hành Sơn",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "trai_cay",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g104/1032239/prof/s640x400/foody-upload-api-foody-mobile-sinhtonfhdf-200625105458.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Trà Long - Trà Trái Cây",
+        "address": {
+            "street": "149/11 Lê Đình Lý",
+            "district": "Quận Hải Châu",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "trai_cay",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g108/1074725/prof/s640x400/file_restaurant_photo_cthf_16856-a889a9e5-230602105429.jpg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Trà Trái Cây - Bà Ngân",
+        "address": {
+            "street": "198 Đ. Lê Duẩn",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "trai_cay",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g116/1151216/prof/s640x400/foody-upload-api-foody-mobile-fo-6c9ff7c4-220920175321.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    },
+    {
+        "deleted": "false",
+        "resname": "Nước Ép Trái Cây Đường Ray",
+        "address": {
+            "street": "K77a/12 Lê Độ",
+            "district": "Quận Thanh Khê",
+            "city": "Đà Nẵng"
+        },
+        "timeOpen": "09:00",
+        "timeClose": "22:00",
+        "seats": 40,
+        "typeOfRes": "trai_cay",
+        "averagePrice": "200000",
+        "image": "https://images.foody.vn/res/g102/1014361/prof/s640x400/file_restaurant_photo_rg6n_16466-9a7741f3-220307170347.jpeg",
+        "pointEvaluation": "null",
+        "description": ""
+    }
+]
