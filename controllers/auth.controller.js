@@ -13,6 +13,7 @@ const sendMail = require("../utils/sendMail.util");
 const { getVerifyEmailTemplate } = require("../utils/helper.util");
 const Menu = require("../models/menu.model");
 const Restaurant = require("../models/restaurant.model");
+const { stringify } = require("querystring");
 exports.register = async (req, res, next) => {
   try {
     const newUser = await User.create(req.body);
@@ -118,6 +119,25 @@ exports.insertData = async (req, res, next) => {
     // console.log(res.resname);
     const newRes = await Restaurant.create(res);
   }
+  res.status(200).send({
+    status: "success",
+  });
+};
+
+exports.updateField = async (req, res, next) => {
+  Restaurant.find({}).then(async (data) => {
+    let i = 0;
+    for (item of data) {
+      const id = item._id;
+      await Restaurant.findByIdAndUpdate(id, { numericId: i }, function (err, docs) {
+        if (err) {
+          console.log(err);
+        } else {
+        }
+      });
+      i++;
+    }
+  });
   res.status(200).send({
     status: "success",
   });

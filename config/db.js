@@ -4,8 +4,8 @@ const {
   MONGODB_USERNAME,
   MONGODB_DATABASE,
 } = require("../constants/config.constant.js");
-const mongoose = require("mongoose")
-
+const mongoose = require("mongoose");
+const AutoIncrement = require("mongoose-sequence")(mongoose);
 const connect = () => {
   new Promise((resolve, reject) => {
     mongoose.connect(
@@ -31,4 +31,4 @@ const connect = () => {
   });
 };
 
-module.exports = {connect};
+module.exports = { connect, AutoIncrement };

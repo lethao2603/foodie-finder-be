@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const validator = require("validator");
+const { AutoIncrement } = require("../config/db");
 const userSchema = new mongoose.Schema(
   {
     firstName: {
@@ -48,6 +49,10 @@ const userSchema = new mongoose.Schema(
       select: false,
     },
     verified: { type: Boolean, default: false },
+    numericId: {
+      type: Number,
+      unique: true,
+    },
   },
   {
     timestamps: true,
@@ -70,6 +75,6 @@ userSchema.pre("save", async function (next) {
   this.passwordConfirm = undefined;
   next();
 });
-
+userSchema.plugin(AutoIncrement, { inc_field: "numericId" });
 const User = mongoose.model("user", userSchema);
 module.exports = User;
