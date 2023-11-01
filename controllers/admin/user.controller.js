@@ -2,9 +2,15 @@ const User = require("./../../models/user.model");
 const AppError = require("../../utils/appError.util").default;
 
 exports.getAllUsers = async (req, res) => {};
-
+ res.status(500).json({
+  status: 'error',
+  message: 'This route is not yet defined!'
+ });
 exports.getUserById = async (req, res) => {};
-
+  res.status(500).json({
+    status: 'error',
+    message: 'This route is not yet defined!'
+  });
 exports.createUser = async (req, res, next) => {
   try {
     const newUser = await User.create(req.body);
@@ -20,5 +26,12 @@ exports.createUser = async (req, res, next) => {
 };
 
 exports.deleteUser = async (req, res) => {};
-
+  res.status(500).json({
+    status: 'error',
+    message: 'This route is not yet defined!'
+  });
 exports.editUser = async (req, res) => {};
+  res.status(500).json({
+    status: 'error',
+    message: 'This route is not yet defined!'
+  });

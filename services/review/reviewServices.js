@@ -9,12 +9,11 @@ module.exports = {
         return result;
     },
     getReview: async (queryString) => {
-        const page = queryString.page;
-        const population = queryString.populate;
-        const { filter, limit } = aqp(queryString);
-        let offset = (page - 1) * limit;
-        delete filter.page;
-        result = await Review.find(filter).populate(population).skip(offset).limit(limit).exec();
+        // const page = queryString.page;
+        // const { filter, limit } = aqp(queryString);
+        // let offset = (page - 1) * limit;
+        // delete filter.page;
+        result = await Review.find(queryString);//.populate('resInfor').skip(offset).limit(limit).exec();
         return result;
     },
     updateReview: async (data) => {

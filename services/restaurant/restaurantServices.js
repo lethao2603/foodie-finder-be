@@ -1,7 +1,6 @@
-const { response } = require("express");
 const Restaurant = require("../../models/restaurant.model");
 const Category = require("../../models/category.model");
-
+const APIFeatures = require("../../utils/apiFeatures");
 const aqp = require("api-query-params");
 
 module.exports = {
@@ -32,17 +31,17 @@ module.exports = {
     }
   },
   getRestaurant: async (queryString) => {
-    const page = queryString.page;
-    const population = queryString.populate;
-    const { filter, limit } = aqp(queryString);
-    let offset = (page - 1) * limit;
-    delete filter.page;
-    result = await Restaurant.find(filter).populate('resCateInfor').skip(offset).limit(limit).exec();
+    //EXECUTE QUERY
+    const features = new APIFeatures(Restaurant.find(), queryString)
+      .filter()
+      .sort()
+      .limitFields()
+      .paginate();
+    const result = await features.query;
     return result;
   },
   getRestaurantById: async (id) => {
-    //const population = queryString.populate;
-    let result = await Restaurant.findById(id).populate('resMenuInfor').exec();
+    let result = await Restaurant.findById(id).populate('resMenuInfor').populate('reviews');
     return result;
   },
   updateRestaurant: async (data) => {
@@ -82,5 +81,10 @@ module.exports = {
       result = [];
     }
     return result;
-  }
+  },
+  aliasTopRes: (req, res) => {
+    req.query.limit = '5';
+    req.query.sort = '-pointEvaluation,averagePrice';
+    req.query.fields = 'resname,address,timeOpen,timeClose,seats,typeOfRes,image';
+  },
 };
