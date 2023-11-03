@@ -1,12 +1,12 @@
 // const router = require("express").Router();
 const express = require("express");
-const router = express.Router();
+const routeAPI = express.Router();
 const UserController = require("../../../controllers/admin/user.controller");
 
-router.get("/", UserController.getAllUsers);
-router.get("/:id", UserController.getUserById);
-router.post("/", UserController.createUser);
-router.patch("/:id", UserController.editUser);
-router.delete("/:id", UserController.deleteUser);
+routeAPI.get("/", UserController.getAllUsers);
+routeAPI.post("/", UserController.createUser);
+routeAPI.get("/:id", UserController.getUserById);
+routeAPI.patch("/:id", UserController.editUser);
+routeAPI.delete("/:id", UserController.deleteUser);
 
-module.exports = router;
+module.exports = routeAPI;

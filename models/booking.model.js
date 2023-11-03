@@ -13,7 +13,7 @@ const bookingSchema = new mongoose.Schema({
     resInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'restaurant'},
     //CusInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'user'},
     },
-    {timestamps: true } // createAt, updateAt
+    { timestamps: { createdAt: 'created_at'}} // createAt
 )
 
 bookingSchema.plugin(mongoose_delete, { overrideMethods: 'all' });

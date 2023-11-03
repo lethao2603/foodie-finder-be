@@ -1,5 +1,5 @@
 const { response } = require("express");
-const Review = require("../../models/review.model");
+const Review = require("../models/review.model");
 
 const aqp = require("api-query-params");
 

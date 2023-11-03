@@ -1,59 +1,41 @@
-const { response } = require("express");
 const Restaurant = require("../../models/restaurant.model");
 const Category = require("../../models/category.model");
-
+const APIFeatures = require("../../utils/apiFeatures");
 const aqp = require("api-query-params");
 
-module.exports = {
-  createRestaurant: async (data) => {
-    if (data.type === "EMPTY-RESTAURANT") {
-      let result = await Restaurant.create(data);
-      return result;
-    }
-    if (data.type === "ADD-MENU") {
-      let menuRestaurant = await Restaurant.findById(data.restaurantId).exec();
 
-      for (let i = 0; i < data.menuArr.length; i++) {
-        menuRestaurant.resMenuInfor.push(data.menuArr[i]);
-      }
-
-      let newResult = await menuRestaurant.save();
-
-      return newResult;
-    }
-    if (data.type === "REMOVE-MENU") {
-      let menuRestaurant = await Restaurant.findById(data.restaurantId).exec();
-      for (let i = 0; i < data.menuArr.length; i++) {
-        menuRestaurant.resMenuInfor.pull(data.menuArr[i]);
-      }
-      let newResult = await menuRestaurant.save();
-
-      return newResult;
-    }
-  },
-  getRestaurant: async (queryString) => {
-    const page = queryString.page;
-    const population = queryString.populate;
-    const { filter, limit } = aqp(queryString);
-    let offset = (page - 1) * limit;
-    delete filter.page;
-    result = await Restaurant.find(filter).populate('resCateInfor').skip(offset).limit(limit).exec();
+exports.createRestaurant = async (data) => {
+    let result = await Restaurant.create(data);
     return result;
-  },
-  getRestaurantById: async (id) => {
-    //const population = queryString.populate;
-    let result = await Restaurant.findById(id).populate('resMenuInfor').exec();
+};
+
+exports.getRestaurant = async (queryString) => {
+    //EXECUTE QUERY
+    const features = new APIFeatures(Restaurant.find(), queryString)
+      .filter()
+      .sort()
+      .limitFields()
+      .paginate();
+    const result = await features.query;
     return result;
-  },
-  updateRestaurant: async (data) => {
+};
+
+exports.getRestaurantById = async (id) => {
+    let result = await Restaurant.findById(id).populate('resMenuInfor').populate('reviews');
+    return result;
+};
+
+exports.updateRestaurant = async (data) => {
     let result = await Restaurant.updateOne({ _id: data.id }, { ...data });
     return result;
-  },
-  deleteRestaurant: async (id) => {
+};
+
+exports.deleteRestaurant = async (id) => {
     let result = await Restaurant.deleteById(id);
     return result;
-  },
-  searchRestaurant: async (queryString) => {
+};
+
+exports.searchRestaurant = async (queryString) => {
     const page = queryString.page;
     const search = queryString.search;
     const { filter, limit } = aqp(queryString);
@@ -73,8 +55,9 @@ module.exports = {
       .exec();
 
     return result;
-  },
-  getResByCatgory: async (cateName) => {
+};
+
+exports.getResByCatgory = async (cateName) => {
     const category = await Category.findOne({ categoryName: cateName });
     if (category) {
       result = await Restaurant.find({ resCateInfor: category._id });
@@ -82,5 +65,35 @@ module.exports = {
       result = [];
     }
     return result;
-  }
 };
+
+exports.aliasTopRes = (req, res) => {
+    req.query.limit = '5';
+    req.query.sort = '-pointEvaluation,averagePrice';
+    req.query.fields = 'resname,address,timeOpen,timeClose,seats,typeOfRes';
+};
+
+exports.calculateRestaurantStats = async (req, res) => {
+    const stats = await Restaurant.aggregate([
+      {
+        $match: { averagePrice: { $gte: 100000 } },
+      },
+      {
+        $group: {
+          _id: { $toUpper: '$typeOfRes'},
+          numTours: { $sum: 1},
+          avgRating: { $avg: '$pointEvaluation' },
+          avgPrice: { $avg: '$averagePrice' },
+          minPrice: { $min: '$averagePrice' },
+          maxPrice: { $max: '$averagePrice' },  
+        },
+      },
+      {
+        $sort: {avgPrice: 1}
+      },
+      // {
+      //   $match: {_id: { $ne: 'BEEFSTEAK'}}
+      // }
+    ]);
+    return stats;
+}

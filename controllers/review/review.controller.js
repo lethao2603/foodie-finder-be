@@ -3,7 +3,7 @@ const useServices = require("../../services/review/reviewServices")
 module.exports = {
     postCreateReview: async (req, res) => {
         let result = await useServices.createReview(req.body);
-        return res.status(200).json(
+        return res.status(201).json(
             {
                 EC: 0,
                 data: result
