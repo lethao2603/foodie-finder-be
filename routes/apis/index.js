@@ -5,7 +5,7 @@ const router = require('express').Router();
 // router.use("/admin/users", require("./admin/user.route"));
 router.use("/auth", require("./auth.route"));
 
-router.use("/customer", require("./customer/customer.route"));
+router.use("/user", require("./admin/user.route"));
 
 router.use("/restaurant", require("./restaurant/restaurant.router"));
 
