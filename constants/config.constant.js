@@ -1,11 +1,11 @@
 const dotenv = require("dotenv");
 dotenv.config({
-  path: "config.env",
+  path: ".env",
 });
 
 const SERVER_HOSTNAME = process.env.SERVER_HOSTNAME;
 
-const SERVER_PORT = process.env.SERVER_PORT;
+const PORT = process.env.PORT;
 
 const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY;
 
@@ -54,7 +54,7 @@ const CLIENT_ERROR_MESSAGE = {
 
 module.exports = {
   SERVER_HOSTNAME,
-  SERVER_PORT,
+  PORT,
   JWT_SECRET_KEY,
   MONGODB_HOSTNAME,
   MONGODB_PORT,
