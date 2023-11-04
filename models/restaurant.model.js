@@ -2,8 +2,13 @@ const mongoose = require("mongoose");
 
 const mongoose_delete = require("mongoose-delete");
 const { DateTime } = require("mssql");
-
-const restaurantSchema = new mongoose.Schema({
+const { AutoIncrement } = require("../config/db");
+const restaurantSchema = new mongoose.Schema(
+  {
+    deleted: {
+      type: "boolean",
+      default: false,
+    },
     resname: { type: String, required: true },
     address: {
       street: { type: String, required: true },
@@ -19,14 +24,19 @@ const restaurantSchema = new mongoose.Schema({
     description: String,
     image: String,
     resMenuInfor: { type: mongoose.Schema.Types.ObjectId, ref: "menu", default: "Undefined" },
-    resCateInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'category',default: "Undefined" },
+    //resCateInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'restaurantCategories'},
     //resOwnerInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'users'},
+    // reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: 'reviews'}],
+    // reservations: [{type: mongoose.Schema.Types.ObjectId, ref: 'reservations'}],
+    numericId1: {
+      type: Number,
+      unique: true,
+    },
   },
   { timestamps: true } // createAt, updateAt
 );
 
 restaurantSchema.plugin(mongoose_delete, { overrideMethods: "all" });
-
+restaurantSchema.plugin(AutoIncrement, { inc_field: "numericId1", start_seq: 504 });
 const Restaurant = mongoose.model("restaurant", restaurantSchema);
-
 module.exports = Restaurant;
