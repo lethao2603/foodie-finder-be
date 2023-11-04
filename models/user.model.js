@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const validator = require("validator");
-
+const crypto = require('crypto');
 
 const userSchema = new mongoose.Schema(
   {
@@ -34,6 +34,9 @@ const userSchema = new mongoose.Schema(
     //     message: "Password not the same",
     //   },
     // },
+    passwordChangeAt: Date,
+    passwordResetToken: String,
+    passwordResetExpires: Date,
     photo: {
       type: String,
       default: "default.jpg",
@@ -54,6 +57,7 @@ const userSchema = new mongoose.Schema(
   {
     timestamps: true,
   }
+
 );
 
 // Statics
@@ -72,6 +76,18 @@ userSchema.pre("save", async function (next) {
   this.passwordConfirm = undefined;
   next();
 });
+
+userSchema.methods.createPasswordResetToken = function() {
+  const resetToken = crypto.randomBytes(32).toString('hex');
+
+  this.passwordResetToken = crypto.createHash('sha256').update(resetToken).digest('hex');
+
+  console.log({resetToken}, this.passwordResetToken);
+
+  this.passwordResetExpires = Date.now() + 10 * 60 * 1000;
+
+  return resetToken;
+}
 
 const User = mongoose.model("user", userSchema);
 module.exports = User;

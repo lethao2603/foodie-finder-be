@@ -1,3 +1,4 @@
+require('dotenv');
 const {promisify} = require('util');
 const jwt = require('jsonwebtoken');
 const { signAccessToken, signRefreshToken } = require("../utils/auth.util");
@@ -137,7 +138,7 @@ exports.protect = async (req, res, next) => {
   }
 
   // Verification token
-  const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET)
+  const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET_KEY);
 
   // Check if user still exists
   const currenUser = await User.findById(decoded.id);
@@ -146,9 +147,9 @@ exports.protect = async (req, res, next) => {
   }
 
   // Check if user changed password after the token was issued
-  if(currenUser.changedPasswordAfter(decoded.iat)) {
-    return next(new AppError('User recently changed password! Please log in in again.', 401))
-  };
+  // if(currenUser.changedPasswordAfter(decoded.iat)) {
+  //   return next(new AppError('User recently changed password! Please log in in again.', 401))
+  // };
 
   // GRANT ACCESS TO PROTECTED ROUTE
   req.user = currenUser;
@@ -164,4 +165,20 @@ exports.restrictTo = (...role) => {
 
     next();
   }
-} 
+};
+
+exports.forgotPassword = async (req, res, next) => {
+  // Get user based on POSTed email
+  const user = await User.findOne({email: req.body.email})
+  if(!user) {
+    return next(new AppError('There is no user with email address.', 404));
+  }
+  // Generate the ramdom reset token
+  const resetToken = user.createPasswordResetToken();
+  await user.save({validateBeforeSave: false}); 
+  // Send it to user's email
+};
+
+exports.resetPassword = (req, res, next) => {
+
+}
