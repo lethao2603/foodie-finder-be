@@ -11,15 +11,16 @@ routeAPI.post("/create", RestaurantController.postCreateRestaurant);
 routeAPI.get("/search", RestaurantController.getsearchRestaurant);
 
 routeAPI.get("/res-stats", RestaurantController.getTourStats); 
-routeAPI.get("/top-5-cheap",RestaurantController.aliasTopRestaurants, RestaurantController.getAllRestaurant);
-
+routeAPI.get("/top-5-cheap",RestaurantController.aliasTopRestaurants,
+    RestaurantController.getAllRestaurant);
 
 routeAPI.post("/create", RestaurantController.postCreateRestaurant);
 routeAPI.put("/update", RestaurantController.putUpdateRestaurant);
 routeAPI.get("/category/:cateName", RestaurantController.getRestaurantByCategory);
-routeAPI.delete("/:id",authController.protect, 
+routeAPI.delete("/:id",
+    authController.protect, 
     authController.restrictTo('admin'), 
-    RestaurantController.deleteDelRestaurant);
+    RestaurantController.deleteDelRestaurant);  
 routeAPI.get("/:id", RestaurantController.getRestaurantById);
 
 // RestaurantController.getAllRestaurant);

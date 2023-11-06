@@ -4,6 +4,7 @@ const helmet = require("helmet");
 const rateLimit = require("express-rate-limit");
 const AppError = require("../utils/appError.util");
 const bodyParser = require("body-parser");
+const hpp = require('hpp');
 
 const mongoose = require('mongoose');
 const fileUpload = require('express-fileupload');
@@ -37,6 +38,11 @@ const limiter = rateLimit({
 app.use("/api", limiter);
 
 app.use(apiRoutes);//router.use('/api', require('./apis'));
+
+//Prevent parameter pollution
+app.use(hpp({
+  whitelist: ['seats', 'typeOfRes', 'averagePrice', 'timeOpen', 'timeClose']
+}));
 
 // handle undefined Routes
 app.use("*", (req, res, next) => {
