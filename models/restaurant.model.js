@@ -26,7 +26,7 @@ const restaurantSchema = new mongoose.Schema({
     image: {type: String, required: [true, 'image must not be empty']},
     resMenuInfor: { type: mongoose.Schema.Types.ObjectId, ref: "menu", default: "Undefined" },
     resCateInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'category',default: "Undefined" },
-    //resOwnerInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'users'},
+    resOwnerInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'user'},
   },
   { timestamps: true } // createAt, updateAt
 );
@@ -41,6 +41,12 @@ restaurantSchema.virtual('reviews', {
   foreignField: 'resInfor',
   localField: '_id'
 });
+
+// restaurantSchema.pre(/^find/, function(next) {
+//   this.populate({path: 'resMenuInfor resOwnerInfor resCateInfor',
+//   select: '-__v -createdAt -updatedAt -numericId -numericId1'});
+//   next();
+// });
 
 const Restaurant = mongoose.model("restaurant", restaurantSchema);
 

@@ -21,7 +21,9 @@ exports.getRestaurant = async (queryString) => {
 };
 
 exports.getRestaurantById = async (id) => {
-    let result = await Restaurant.findById(id).populate('resMenuInfor').populate('reviews');
+    let result = await Restaurant.findById(id)
+    .populate({path: 'resMenuInfor resOwnerInfor resCateInfor',
+    select: '-__v -createdAt -updatedAt -numericId -numericId1'});;
     return result;
 };
 

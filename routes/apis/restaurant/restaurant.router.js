@@ -4,7 +4,7 @@ const RestaurantController = require("../../../controllers/restaurant/restaurant
 const reviewController = require('../../../controllers/review/review.controller');
 const authController = require('../../../controllers/auth.controller');
 
-routeAPI.get("/",authController.protect,
+routeAPI.get("/",//authController.protect,
     RestaurantController.getAllRestaurant);
 routeAPI.post("/create", RestaurantController.postCreateRestaurant);
 

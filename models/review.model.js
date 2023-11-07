@@ -7,7 +7,7 @@ const reviewSchema = new mongoose.Schema({
     resInfor: { type: mongoose.Schema.Types.ObjectId, ref: "restaurant", require: true },
     },
     {timestamps: true } // createAt, updateAt
-)
+);
 
 reviewSchema.pre(/^find/, function(next) {
     this.populate({

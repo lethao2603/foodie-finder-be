@@ -59,7 +59,10 @@ const userSchema = new mongoose.Schema(
   }
 
 );
-
+userSchema.path('photo').select(false);
+userSchema.path('verified').select(false);
+userSchema.path('phone').select(false);
+userSchema.path('password').select(false);
 // Statics
 userSchema.statics.compare = async (candidatePassword, password) => {
   return await bcrypt.compare(candidatePassword, password);
