@@ -1,7 +1,10 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const validator = require("validator");
+
 const crypto = require('crypto');
+
+const { AutoIncrement } = require("../config/db");
 
 const userSchema = new mongoose.Schema(
   {
@@ -20,7 +23,7 @@ const userSchema = new mongoose.Schema(
     },
     password: {
       type: String,
-      require: [true, "Please provide a password"],
+      required: [true, "Please provide a password"],
       minlenght: 8,
     },
     // passwordConfirm: {
@@ -53,6 +56,10 @@ const userSchema = new mongoose.Schema(
       select: false,
     },
     verified: { type: Boolean, default: false },
+    numericId: {
+      type: Number,
+      unique: true,
+    },
   },
   {
     timestamps: true,
@@ -91,6 +98,8 @@ userSchema.methods.createPasswordResetToken = function() {
 
   return resetToken;
 }
+
+userSchema.plugin(AutoIncrement, { inc_field: "numericId" });
 
 const User = mongoose.model("user", userSchema);
 module.exports = User;
