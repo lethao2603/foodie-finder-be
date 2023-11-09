@@ -9,12 +9,8 @@ const restaurantSchema = new mongoose.Schema(
       type: String, 
       required: [true, 'A restaurant must have a name'], 
       unique: true, 
-      trim: true},
-    deleted: {
-      type: "boolean",
-      default: false,
+      trim: true
     },
-    resname: { type: String, required: true },
     address: {
       street: { type: String, required: [true, 'Street must not be empty'], trim: true},
       district: { type: String, required: [true, 'District must not be empty'], trim: true},
@@ -33,28 +29,29 @@ const restaurantSchema = new mongoose.Schema(
     description: { type: String, trim: true},
     image: {type: String, required: [true, 'image must not be empty']},
     resMenuInfor: { type: mongoose.Schema.Types.ObjectId, ref: "menu", default: "Undefined" },
-    resCateInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'category',default: "Undefined" },
+    resCateInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'category'},
     resOwnerInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'user'},
-    // reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: 'reviews'}],
+
     // reservations: [{type: mongoose.Schema.Types.ObjectId, ref: 'reservations'}],
     numericId1: {
       type: Number,
       unique: true,
     },
   },
-  { timestamps: true } // createAt, updateAt
+  { timestamps: true }, // createAt, updateAt
 );
 restaurantSchema.path('createdAt').select(false);
 restaurantSchema.path('updatedAt').select(false);
 restaurantSchema.plugin(mongoose_delete, { overrideMethods: "all" });
 
-// Chưa hiển thị được trường ảo: reviews
 //Virtual populate
 restaurantSchema.virtual('reviews', {
   ref: 'review',
   foreignField: 'resInfor',
   localField: '_id'
 });
+restaurantSchema.set('toObject', { virtuals: true });
+restaurantSchema.set('toJSON', { virtuals: true });
 
 // restaurantSchema.pre(/^find/, function(next) {
 //   this.populate({path: 'resMenuInfor resOwnerInfor resCateInfor',

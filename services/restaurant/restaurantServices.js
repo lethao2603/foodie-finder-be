@@ -21,14 +21,14 @@ exports.getRestaurant = async (queryString) => {
 };
 
 exports.getRestaurantById = async (id) => {
-    let result = await Restaurant.findById(id)
+    let result = await Restaurant.findById(id).populate('reviews')
     .populate({path: 'resMenuInfor resOwnerInfor resCateInfor',
-    select: '-__v -createdAt -updatedAt -numericId -numericId1'});;
+    select: '-__v -createdAt -updatedAt -numericId -numericId1'});
     return result;
 };
 
-exports.updateRestaurant = async (data) => {
-    let result = await Restaurant.updateOne({ _id: data.id }, { ...data });
+exports.updateRestaurant = async (id, data) => {
+    let result = await Restaurant.updateOne({ _id: id }, { $set: data });
     return result;
 };
 

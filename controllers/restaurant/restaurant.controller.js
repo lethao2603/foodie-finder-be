@@ -55,13 +55,15 @@ exports.getRestaurantById = async (req, res) => {
     }
 };
 
-exports.putUpdateRestaurant = async (req, res) => {
+exports.patchUpdateRestaurant = async (req, res) => {
     try {
-        let result = await useServices.updateRestaurant(req.body);
+        const id = req.params.id;
+        const updatedData = req.body;
+        let result = await useServices.updateRestaurant(id, updatedData);
         return res.status(200).json(
             {
                 status: 'success',
-                data: result
+                data: null
             })
     } catch (error) {
         res.status(404).json({

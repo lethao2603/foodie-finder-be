@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const validator = require("validator");
+const mongoose_delete = require("mongoose-delete");
 
 const crypto = require('crypto');
 
@@ -67,9 +68,9 @@ const userSchema = new mongoose.Schema(
 
 );
 userSchema.path('photo').select(false);
-userSchema.path('verified').select(false);
 userSchema.path('phone').select(false);
 userSchema.path('password').select(false);
+userSchema.plugin(mongoose_delete, { overrideMethods: "all" });
 // Statics
 userSchema.statics.compare = async (candidatePassword, password) => {
   return await bcrypt.compare(candidatePassword, password);
