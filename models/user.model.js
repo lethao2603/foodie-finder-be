@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const validator = require("validator");
+
+const crypto = require("crypto");
+
 const { AutoIncrement } = require("../config/db");
 const userSchema = new mongoose.Schema(
   {
@@ -58,8 +61,6 @@ const userSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
-
-// Statics
 userSchema.statics.compare = async (candidatePassword, password) => {
   return await bcrypt.compare(candidatePassword, password);
 };
@@ -75,6 +76,18 @@ userSchema.pre("save", async function (next) {
   this.passwordConfirm = undefined;
   next();
 });
+userSchema.methods.createPasswordResetToken = function () {
+  const resetToken = crypto.randomBytes(32).toString("hex");
+
+  this.passwordResetToken = crypto.createHash("sha256").update(resetToken).digest("hex");
+
+  console.log({ resetToken }, this.passwordResetToken);
+
+  this.passwordResetExpires = Date.now() + 10 * 60 * 1000;
+
+  return resetToken;
+};
+
 userSchema.plugin(AutoIncrement, { inc_field: "numericId" });
 const User = mongoose.model("user", userSchema);
 module.exports = User;
