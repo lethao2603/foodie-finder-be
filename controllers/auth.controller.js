@@ -15,35 +15,9 @@ const sendMail = require("../utils/sendMail.util");
 const { getVerifyEmailTemplate } = require("../utils/helper.util");
 const Menu = require("../models/menu.model");
 const Restaurant = require("../models/restaurant.model");
-const { use } = require("../routes/apis/auth.route");
-
-const signToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET_KEY, {
-    expiresIn: process.env.JWT_EXPIRS_IN,
-  });
-};
-
-const createSendToken = (User, statusCode, res) => {
-  const token = signToken(User._id);
-  const cookieOptions = {
-    expires: new Date(Date.now() + processe.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000),
-    httpOnly: true,
-  };
-  if (pcocess.env.NODE_ENV === "production") cookieOptions.secure = true;
-
-  res.cookie("jwt", token, cookieOptions);
-
-  //Remove password from output
-  user.password = undefined;
-  res.status(statusCode).json({
-    status: "success",
-    token,
-    data: {
-      user,
-    },
-  });
-};
-
+const Review = require("../models/review.model");
+const { ObjectId } = require("mongodb");
+// const Review = mongoose.model("Review");
 exports.register = async (req, res, next) => {
   try {
     const newUser = await User.create(req.body);
@@ -154,81 +128,122 @@ exports.insertData = async (req, res, next) => {
   });
 };
 
-exports.protect = async (req, res, next) => {
-  // Getting token and check of it's there
-  let token;
-  if (req.headers.authorization && req.headers.authorization.startsWith("Bearer")) {
-    token = req.headers.authorization.split(" ")[1];
+exports.fakeDataUser = async (req, res, next) => {
+  console.log("hi");
+  const dataUser = readJSONFile(`NewDataCusomer.json`);
+  for (let i = 0; i < dataUser.length; i++) {
+    // Goi ham insert
+    const newUser = await User.create(dataUser[i]);
   }
-
-  if (!token) {
-    return next(new AppError("You are not logged in! Please log in to get access.", 401));
-  }
-
-  // Verification token
-  const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET_KEY);
-
-  // Check if user still exists
-  const currenUser = await User.findById(decoded.id);
-  if (!currenUser) {
-    return next(new AppError("The user belonging to this token does no longer exist.", 401));
-  }
-
-  // Check if user changed password after the token was issued
-  // if(currenUser.changedPasswordAfter(decoded.iat)) {
-  //   return next(new AppError('User recently changed password! Please log in in again.', 401))
-  // };
-
-  // GRANT ACCESS TO PROTECTED ROUTE
-  req.user = currenUser;
-  next();
+  // User.counterReset("6545f70d93aa62c488173fdf", function (err) {
+  //   // Now the counter is 0
+  // });
+  res.status(200).send({
+    status: "success",
+  });
 };
 
-exports.restrictTo = (...role) => {
-  return (req, res, next) => {
-    // role ['customer', 'restaurant-owner', 'admin']
-    if (!role.includes(req.user.role)) {
-      return next(new AppError("You do not have permission to perform this action", 403));
-    }
-
-    next();
-  };
+exports.fakeDataRating = async (req, res, next) => {
+  console.log("hi");
+  function generateRandomRating() {
+    return Math.floor(Math.random() * 5) + 1;
+  }
+  const restaurantIds = await Restaurant.find().distinct("_id");
+  const userIds = await User.find().distinct("_id");
+  for (let i = 0; i < 300; i++) {
+    const review = {
+      rating: generateRandomRating(),
+      resInfor: restaurantIds[Math.floor(Math.random() * restaurantIds.length)],
+      cusInfor: userIds[Math.floor(Math.random() * userIds.length)],
+    };
+    const newReview = await Review.create(review);
+  }
+  res.status(200).send({
+    status: "success",
+  });
 };
 
-exports.forgotPassword = async (req, res, next) => {
-  // Get user based on POSTed email
-  const user = await User.findOne({ email: req.body.email });
-  if (!user) {
-    return next(new AppError("There is no user with email address.", 404));
-  }
-  // Generate the ramdom reset token
-  const resetToken = user.createPasswordResetToken();
-  await user.save({ validateBeforeSave: false });
-  // Send it to user's email
-  const resetURL = `${req.protocol}://${req.get("host")}/api/auth/resetPassword/${resetToken}`;
+const fs = require("fs"); // Import thư viện fs
 
-  const message = `Forgot your password? Submit a PATCH request with your new password
-  and password confirm to: ${resetURL}.\nIf you didn't forget your password, please ignore
-  this email!`;
-
+exports.fakeInputRCM = async (req, res, next) => {
+  console.log("hi");
   try {
-    await sendMail({
-      email: user.email,
-      subject: "Your password reset token (valid for 10 min)",
-      message,
-    });
-
-    res.status(200).json({
+    const results = await Review.aggregate([
+      {
+        $group: {
+          _id: "$cusInfor",
+          reviews: {
+            $push: {
+              resInfor: "$resInfor",
+              rating: "$rating",
+            },
+          },
+        },
+      },
+    ]);
+    console.log(results);
+    // Chuyển kết quả thành chuỗi JSON
+    const jsonResult = JSON.stringify({
       status: "success",
-      message: "Token sent to email!",
+      data: results,
     });
-  } catch (error) {
-    User.passwordResetToken = undefined;
-    User.passwordResetExpires = undefined;
-    await user.save({ validateBeforeSave: false });
-
-    return next(new AppError("There was an error sending the email. try again later!"), 500);
+    // Lưu kết quả vào một tệp JSON
+    fs.writeFile("result.json", jsonResult, "utf8", (err) => {
+      if (err) {
+        console.error(err);
+        res.status(500).json({
+          status: "error",
+          message: "Lỗi trong quá trình lưu kết quả vào tệp JSON",
+        });
+      } else {
+        res.status(200).json({
+          status: "success",
+          message: "Kết quả đã được lưu vào tệp result.json",
+        });
+      }
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      status: "error",
+      message: "Lỗi trong quá trình xử lý dữ liệu",
+    });
   }
 };
 
-exports.resetPassword = (req, res, next) => {};
+exports.fakeTransferRCM = async (req, res, next) => {
+  console.log("hi");
+  // const data = readJSONFile(`result.json`);
+  // // Create an empty array to store output data
+  // const outputData = [];
+  // // Process the data to generate the output
+  // for (const entry of data) {
+  //   const user = await User.findOne({ _id: entry._id });
+  //   // const user = await User.findOne({ _id: ObjectId(entry._id) });
+  //   // console.log(user);
+  //   // console.log(entry._id);
+  //   for (const review of entry.reviews) {
+  //     const restaurant = await Restaurant.findOne({ _id: review.resInfor });
+  //     const user_numericId = user ? user.numericId : "N/A";
+  //     const restaurant_numericId1 = restaurant ? restaurant.numericId1 : "N/A";
+  //     const rating = review.rating;
+  //     //Format the data and push it into the outputData array
+  //     outputData.push(`${user_numericId}   ${restaurant_numericId1}   ${rating}`);
+  //   }
+  // }
+  // // Join the outputData into a single string
+  // const outputString = outputData.join("\n");
+  // // Define the file path where you want to save the output
+  // const outputPath = "output.txt";
+  // // Write the output to a file
+  // fs.writeFileSync(outputPath, outputString, "utf-8");
+  // console.log(`Output saved to ${outputPath}`);
+
+  res.status(200).send({
+    status: "success",
+  });
+};
+
+exports.updatedUniqueRestaurant = async (req, res, next) => {
+  console.log("hi");
+};

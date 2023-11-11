@@ -51,7 +51,7 @@ const userSchema = new mongoose.Schema(
       default: true,
       select: false,
     },
-    verified: { type: Boolean, default: false },
+    verified: { type: Boolean, default: true },
     numericId: {
       type: Number,
       unique: true,
@@ -73,21 +73,9 @@ userSchema.pre("save", async function (next) {
   this.password = await bcrypt.hash(this.password, 12);
 
   // Delete passwordConfirm field
-  this.passwordConfirm = undefined;
+  // this.passwordConfirm = undefined;
   next();
 });
-userSchema.methods.createPasswordResetToken = function () {
-  const resetToken = crypto.randomBytes(32).toString("hex");
-
-  this.passwordResetToken = crypto.createHash("sha256").update(resetToken).digest("hex");
-
-  console.log({ resetToken }, this.passwordResetToken);
-
-  this.passwordResetExpires = Date.now() + 10 * 60 * 1000;
-
-  return resetToken;
-};
-
-userSchema.plugin(AutoIncrement, { inc_field: "numericId" });
+userSchema.plugin(AutoIncrement, { inc_field: "numericId", start_seq: 0 });
 const User = mongoose.model("user", userSchema);
 module.exports = User;
