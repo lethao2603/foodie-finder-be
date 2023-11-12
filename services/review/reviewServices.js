@@ -10,7 +10,7 @@ exports.getReview = async (filter) => {
         return result;
 };
 
-exports.updateReview = async (data) => {
+exports.updateReview = async (id, data) => {
         let result = await User.updateOne({ _id: id }, { $set: data });
         return result;
 };

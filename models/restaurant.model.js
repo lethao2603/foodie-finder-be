@@ -25,7 +25,9 @@ const restaurantSchema = new mongoose.Schema(
     averagePrice: { type: Number, required: [true, 'averagePrice must not be empty']},
     pointEvaluation: {type: Number,default: 4.5,
       min: [1, 'Rating must be above 1.0'],
-      max: [5, 'Rating must be below 5.0']},
+      max: [5, 'Rating must be below 5.0'],
+      set: val => Math.round(val * 10) / 10 // 4.6666 -> 4.7
+    },
     description: { type: String, trim: true},
     image: {type: String, required: [true, 'image must not be empty']},
     resMenuInfor: { type: mongoose.Schema.Types.ObjectId, ref: "menu", default: "Undefined" },
