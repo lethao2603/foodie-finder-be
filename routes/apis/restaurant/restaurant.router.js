@@ -1,38 +1,35 @@
 const express = require("express");
 const routeAPI = express.Router();
 const RestaurantController = require("../../../controllers/restaurant/restaurant.controller");
-const reviewController = require('../../../controllers/review/review.controller');
-const authController = require('../../../controllers/auth.controller');
+const reviewRouter = require("../review/review.router");
+const authController = require("../../../controllers/auth.controller");
 
-routeAPI.get("/",//authController.protect,
-    RestaurantController.getAllRestaurant);
-routeAPI.post("/create", RestaurantController.postCreateRestaurant);
+// POST /restaurant/d343dsds/review
+// GET /restaurant/d343dsds/review
 
-routeAPI.get("/search", RestaurantController.getsearchRestaurant);
+routeAPI.use("/:resId/review", reviewRouter);
 
 routeAPI.get("/res-stats", RestaurantController.getTourStats); 
 routeAPI.get("/top-5-cheap",RestaurantController.aliasTopRestaurants,
     RestaurantController.getAllRestaurant);
+routeAPI.get("/search", RestaurantController.getsearchRestaurant);
 
-routeAPI.post("/create", RestaurantController.postCreateRestaurant);
-routeAPI.put("/update", RestaurantController.putUpdateRestaurant);
-routeAPI.get("/category/:cateName", RestaurantController.getRestaurantByCategory);
+routeAPI.get("/", RestaurantController.getAllRestaurant);
+routeAPI.post("/create",
+    authController.protect, 
+    authController.restrictTo('admin', 'restaurant-owner'), 
+    RestaurantController.postCreateRestaurant
+);
+routeAPI.get("/:id", RestaurantController.getRestaurantById);
+routeAPI.patch("/:id",
+    authController.protect, 
+    authController.restrictTo('admin', 'restaurant-owner'),  
+    RestaurantController.patchUpdateRestaurant);
 routeAPI.delete("/:id",
     authController.protect, 
-    authController.restrictTo('admin'), 
+    authController.restrictTo('admin', 'restaurant-owner'), 
     RestaurantController.deleteDelRestaurant);  
-routeAPI.get("/:id", RestaurantController.getRestaurantById);
 
-// RestaurantController.getAllRestaurant);
-
-// POST /restaurant/d343dsds/review
-// GET /restaurant/d343dsds/review
-// GET /restaurant/d343dsds/review/ds3232d
-// routeAPI.route('/:restaurantID/review')
-// .post(
-//     authController.protect,
-//     authController.restrictTo('users'),
-//     reviewController.createReview
-// );
+routeAPI.get("/category/:cateName", RestaurantController.getRestaurantByCategory);
 
 module.exports = routeAPI;
