@@ -9,10 +9,11 @@ exports.createUser = async (data) => {
 exports.getUser = async (queryString) => {
     //EXECUTE QUERY
     let features = new APIFeatures(User.find(), queryString)
-      .filter()
-      .sort()
-      .limitFields()
-      .paginate();
+        .search()
+        .filter()
+        .sort()
+        .limitFields()
+        .paginate();
     let result = await features.query;
     return result;
 };

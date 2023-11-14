@@ -9,14 +9,26 @@ const bookingSchema = new mongoose.Schema({
     date: { type: Date, required: true },
     time: { type: String, required: true },
     numberOfPeople: { type: Number, required: true },
-    status: String,
+    status:{type: Boolean, default: false}, 
     resInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'restaurant'},
-    //CusInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'user'},
+    cusInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'user'},
     },
     { timestamps: { createdAt: 'created_at'}} // createAt
 )
 
 bookingSchema.plugin(mongoose_delete, { overrideMethods: 'all' });
+
+bookingSchema.index({customerName: 'text',
+    email: 'text',phoneNumber: 'text'
+});
+
+bookingSchema.pre(/^find/, function(next){
+    this.populate({
+        path: 'resInfor',
+        select: 'resname'
+    });
+    next();
+});
 
 const Booking = mongoose.model('booking', bookingSchema); 
 

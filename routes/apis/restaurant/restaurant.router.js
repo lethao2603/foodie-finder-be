@@ -15,7 +15,7 @@ routeAPI.get("/top-5-cheap",RestaurantController.aliasTopRestaurants,
 routeAPI.get("/search", RestaurantController.getsearchRestaurant);
 
 routeAPI.get("/", RestaurantController.getAllRestaurant);
-routeAPI.post("/create",
+routeAPI.post("/",
     authController.protect, 
     authController.restrictTo('admin', 'restaurant-owner'), 
     RestaurantController.postCreateRestaurant
@@ -24,6 +24,8 @@ routeAPI.get("/:id", RestaurantController.getRestaurantById);
 routeAPI.patch("/:id",
     authController.protect, 
     authController.restrictTo('admin', 'restaurant-owner'),  
+    RestaurantController.uploadResImages,
+    RestaurantController.resizeResImages,
     RestaurantController.patchUpdateRestaurant);
 routeAPI.delete("/:id",
     authController.protect, 

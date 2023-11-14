@@ -45,6 +45,10 @@ const restaurantSchema = new mongoose.Schema(
 restaurantSchema.path('createdAt').select(false);
 restaurantSchema.path('updatedAt').select(false);
 restaurantSchema.plugin(mongoose_delete, { overrideMethods: "all" });
+restaurantSchema.index({resname: 'text',
+  typeOfRes: 'text',"address.street": 'text',
+  "address.district": 'text',"address.province": 'text',"categoryName": 'text'
+});
 
 //Virtual populate
 restaurantSchema.virtual('reviews', {
@@ -52,14 +56,14 @@ restaurantSchema.virtual('reviews', {
   foreignField: 'resInfor',
   localField: '_id'
 });
-restaurantSchema.set('toObject', { virtuals: true });
-restaurantSchema.set('toJSON', { virtuals: true });
 
-// restaurantSchema.pre(/^find/, function(next) {
-//   this.populate({path: 'resMenuInfor resOwnerInfor resCateInfor',
-//   select: '-__v -createdAt -updatedAt -numericId -numericId1'});
-//   next();
-// });
+restaurantSchema.pre(/^find/, function(next){
+  this.populate({
+      path: 'resCateInfor',
+      select: 'categoryName'
+  });
+  next();
+});
 
 restaurantSchema.plugin(AutoIncrement, { inc_field: "numericId1", start_seq: 504 });
 

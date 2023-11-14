@@ -5,9 +5,8 @@ const rateLimit = require("express-rate-limit");
 const AppError = require("../utils/appError.util");
 const bodyParser = require("body-parser");
 const hpp = require('hpp');
-
+const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
-const fileUpload = require('express-fileupload');
 
 const app = express();
 const globalErrorHandler = require("../controllers/globalError.controller");
@@ -17,13 +16,10 @@ app.use(cors());
 // Set security HTTP headers
 app.use(helmet());
 
-//config file upload
-// default options
-app.use(fileUpload());
-
 //config  req.body
 app.use(express.json()) // for JSON
 app.use(express.urlencoded({ extended: true})) // for form data
+//app.use(cookieParser())
 
 //config template engine
 //configViewEngine(app);

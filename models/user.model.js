@@ -67,10 +67,14 @@ const userSchema = new mongoose.Schema(
   }
 
 );
-userSchema.path('photo').select(false);
 userSchema.path('phone').select(false);
 userSchema.path('password').select(false);
 userSchema.plugin(mongoose_delete, { overrideMethods: "all" });
+
+userSchema.index({firstName: 'text',
+lastName: 'text',email: 'text', phone: 'text'
+});
+
 // Statics
 userSchema.statics.compare = async (candidatePassword, password) => {
   return await bcrypt.compare(candidatePassword, password);

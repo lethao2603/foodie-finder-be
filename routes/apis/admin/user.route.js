@@ -8,7 +8,10 @@ const authController = require("../../../controllers/auth.controller");
 routeAPI.use(authController.protect);
 
 routeAPI.get("/me", UserController.getMe, UserController.getUserById);
-routeAPI.patch("/updateMe", UserController.updateMe);
+routeAPI.patch("/updateMe", 
+    UserController.uploadUserPhoto, 
+    UserController.resizeUserPhoto, 
+    UserController.updateMe);
 routeAPI.delete("/deleteMe", UserController.deleteMe);
 
 

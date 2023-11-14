@@ -6,7 +6,7 @@ class APIFeatures {
   
     filter() {
       const queryObj = {...this.queryString};
-      const excludeFields = ['page', 'sort', 'limit', 'fields'];
+      const excludeFields = ['search','page', 'sort', 'limit', 'fields'];
       excludeFields.forEach(el => delete queryObj[el]);
   
       //Advanced filtering
@@ -16,7 +16,15 @@ class APIFeatures {
       
       return this;
     }
-  
+
+    search() {
+      if (this.queryString.search) {
+        const search = this.queryString.search;
+        this.query = this.query.find({ $text: {$search: "\""+search+"\""} });
+      }
+      return this;
+    }
+
     sort() {
       if (this.queryString.sort) {
         const sortBy = this.queryString.sort.split(',').join(' ');
