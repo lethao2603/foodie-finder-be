@@ -2,11 +2,12 @@ const express = require("express");
 const routeAPI = express.Router();
 const RestaurantController = require("../../../controllers/restaurant/restaurant.controller");
 const reviewRouter = require("../review/review.router");
+const bookingRouter = require("../booking/booking.router");
 const authController = require("../../../controllers/auth.controller");
 
 // POST /restaurant/d343dsds/review
 // GET /restaurant/d343dsds/review
-
+routeAPI.use("/:resId/booking", bookingRouter);
 routeAPI.use("/:resId/review", reviewRouter);
 
 routeAPI.get("/res-stats", RestaurantController.getTourStats); 

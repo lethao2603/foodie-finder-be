@@ -1,18 +1,51 @@
 const useServices = require("../../services/booking/bookingServices")
+const Booking = require("../../models/booking.model");
+const socketService = require('../../libs/socket.lib');
 
 exports.postCreateBooking = async (req, res) => {
     try {
+         //Allow nested routes
+        if(!req.body.restaurant) req.body.resInfor = req.params.resId;
+        if(!req.body.customer) req.body.cusInfor = req.user.id; 
+
         let result = await useServices.createBooking(req.body);
         return res.status(201).json(
             {
                 status: 'success',
                 data: result
             });
+            
     } catch (error) {
         res.status(400).json({
             status: 'fail',
             message: error
         });
+    }
+};
+
+exports.patchBookingConfirm = async (req, res) => {
+    try {
+        const bookingId = req.params.bookingId;
+        // Tìm đơn đặt bàn trong cơ sở dữ liệu
+        const findBooking = await Booking.findById(bookingId);
+
+        // Kiểm tra xem đơn đặt bàn có tồn tại hay không
+        if (findBooking) {
+            findBooking.status = true;
+
+            // Lưu thông tin đơn đặt bàn đã cập nhật vào cơ sở dữ liệu
+            await findBooking.save();
+
+            // Thông báo cho khách hàng với Socket.IO
+            socketService.emitBookingConfirmedEvent(bookingId, 'Đơn đặt bàn của bạn đã được chấp nhận', bookingId );
+
+            res.json({ status: true });
+        } else {
+            res.status(404).json({ error: 'Booking not found' });
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
     }
 };
 
@@ -35,7 +68,10 @@ exports.getBookingById = async (req, res) => {
 
 exports.getAllBooking = async (req, res) => {
     try {
-        let result = await useServices.allBooking(req.query);
+        let filter = {};
+        if(req.params.resId) 
+            filter = { resInfor: req.params.resId};
+        let result = await useServices.allBooking(filter);
         return res.status(200).json(
             {
                 status: 'success',

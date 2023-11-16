@@ -1,14 +1,19 @@
 const express = require('express');
-const routeAPI = express.Router();
+const routeAPI = express.Router({mergeParams: true});
 const BookingController = require("../../../controllers/booking/booking.controller");
 const authController = require("../../../controllers/auth.controller");
 
 //routerAPI
 routeAPI.use(authController.protect);
-routeAPI.use(authController.restrictTo('admin'));
 
-routeAPI.post('/', BookingController.postCreateBooking);
+routeAPI.post('/', authController.restrictTo('customer'), BookingController.postCreateBooking);
 routeAPI.get('/', BookingController.getAllBooking);
+
+// Confirm Booking
+routeAPI.patch('/:bookingId/confirm',
+    authController.restrictTo('restaurant-owner'), BookingController.patchBookingConfirm);
+
+routeAPI.use(authController.restrictTo('customer'));
 
 routeAPI.get('/:id', BookingController.getBookingById);
 routeAPI.patch('/:id', BookingController.patchUpdateBooking);
