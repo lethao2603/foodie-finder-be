@@ -4,9 +4,10 @@ const reviewController = require("../../../controllers/review/review.controller"
 const authController = require('../../../controllers/auth.controller');
 
 //routerAPI
-routeAPI.use(authController.protect)
+
 
 routeAPI.get('/', reviewController.getAllReview);
+routeAPI.use(authController.protect)
 routeAPI.post('/', authController.restrictTo('customer'), reviewController.postCreateReview);
 
 routeAPI.patch('/:id', 
