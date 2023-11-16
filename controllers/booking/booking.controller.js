@@ -76,6 +76,7 @@ exports.getAllBooking = async (req, res) => {
             {
                 status: 'success',
                 results: result.length,
+                total_page: Math.ceil(result.length / 10),
                 data: result
             });
     } catch (error) {
