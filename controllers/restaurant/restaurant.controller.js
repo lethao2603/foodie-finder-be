@@ -78,7 +78,7 @@ exports.getAllRestaurant = async (req, res) => {
             {
                 status: 'success',
                 results: result.length,
-                total_page: Math.ceil(result.length / 10),
+                total_page: Math.ceil(result.length / result.limit),
                 data: result
             });
     } catch (error) {
