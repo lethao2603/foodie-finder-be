@@ -3,20 +3,18 @@ const Category = require("../../models/category.model");
 const APIFeatures = require("../../utils/apiFeatures");
 
 exports.createRestaurant = async (data) => {
-    let result = await Restaurant.create(data);
-    return result;
+  let result = await Restaurant.create(data);
+  return result;
 };
 
 exports.getRestaurant = async (queryString) => {
-    //EXECUTE QUERY
-    const features = new APIFeatures(Restaurant.find(), queryString)
-      .search()
-      .filter()
-      .sort()
-      .limitFields()
-      .paginate();
-    const result = await features.query;
-    return result;
+
+  //EXECUTE QUERY
+  const features = new APIFeatures(Restaurant.find(), queryString);
+  const _ = await features.getMetadata();
+  features.search().filter().sort().limitFields().paginate()
+  const result = await features.query;
+  return { result, ...features.metadata, pageSize: result.length };
 };
 
 exports.getRestaurantById = async (id) => {
@@ -32,11 +30,12 @@ exports.updateRestaurant = async (id, data) => {
 };
 
 exports.deleteRestaurant = async (id) => {
-    let result = await Restaurant.deleteById(id);
-    return result;
+  let result = await Restaurant.deleteById(id);
+  return result;
 };
 
 exports.searchRestaurant = async (queryString) => {
+
   const features = new APIFeatures(Restaurant.find(), queryString)
   .search()
   .paginate();
@@ -45,42 +44,42 @@ exports.searchRestaurant = async (queryString) => {
 };
 
 exports.getResByCatgory = async (cateName) => {
-    const category = await Category.findOne({ categoryName: cateName });
-    if (category) {
-      result = await Restaurant.find({ resCateInfor: category._id });
-    } else {
-      result = [];
-    }
-    return result;
+  const category = await Category.findOne({ categoryName: cateName });
+  if (category) {
+    result = await Restaurant.find({ resCateInfor: category._id });
+  } else {
+    result = [];
+  }
+  return result;
 };
 
 exports.aliasTopRes = (req, res) => {
-    req.query.limit = '5';
-    req.query.sort = '-pointEvaluation,averagePrice';
-    req.query.fields = 'resname,address,timeOpen,timeClose,seats,typeOfRes';
+  req.query.limit = "5";
+  req.query.sort = "-pointEvaluation,averagePrice";
+  req.query.fields = "resname,address,timeOpen,timeClose,seats,typeOfRes";
 };
 
 exports.calculateRestaurantStats = async (req, res) => {
-    const stats = await Restaurant.aggregate([
-      {
-        $match: { averagePrice: { $gte: 100000 } },
+  const stats = await Restaurant.aggregate([
+    {
+      $match: { averagePrice: { $gte: 100000 } },
+    },
+    {
+      $group: {
+        _id: { $toUpper: "$typeOfRes" },
+        numTours: { $sum: 1 },
+        avgRating: { $avg: "$pointEvaluation" },
+        avgPrice: { $avg: "$averagePrice" },
+        minPrice: { $min: "$averagePrice" },
+        maxPrice: { $max: "$averagePrice" },
       },
-      {
-        $group: {
-          _id: { $toUpper: '$typeOfRes'},
-          numTours: { $sum: 1},
-          avgRating: { $avg: '$pointEvaluation' },
-          avgPrice: { $avg: '$averagePrice' },
-          minPrice: { $min: '$averagePrice' },
-          maxPrice: { $max: '$averagePrice' },  
-        },
-      },
-      {
-        $sort: {avgPrice: 1}
-      },
-      // {
-      //   $match: {_id: { $ne: 'BEEFSTEAK'}}
-      // }
-    ]);
-    return stats;
-}
+    },
+    {
+      $sort: { avgPrice: 1 },
+    },
+    // {
+    //   $match: {_id: { $ne: 'BEEFSTEAK'}}
+    // }
+  ]);
+  return stats;
+};
