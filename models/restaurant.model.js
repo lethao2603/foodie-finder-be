@@ -18,7 +18,9 @@ const restaurantSchema = new mongoose.Schema(
     },
     timeOpen: { type: String, required: [true, 'timeOpen must not be empty']},
     timeClose: { type: String, required: [true, 'timeClose must not be empty']},
-    seats: { type: Number, required: [true, 'seats must not be empty']},
+    seats: { type: Number, required: [true, 'seats must not be empty'],
+      min: [10, 'Seats must be greater than or equal to 10'],
+      max: [100, 'Seats must be less than or equal to 100'],},
     typeOfRes: {
       type: String, 
       required: [true, 'typeOfRes must not be empty']},
@@ -28,9 +30,10 @@ const restaurantSchema = new mongoose.Schema(
       max: [5, 'Rating must be below 5.0'],
       set: val => Math.round(val * 10) / 10 // 4.6666 -> 4.7
     },
+    status: { type: String, default: 'pending' }, // 'pending', 'accepted', 'rejected'
     description: { type: String, trim: true},
     image: {type: String, required: [true, 'image must not be empty']},
-    resMenuInfor: { type: mongoose.Schema.Types.ObjectId, ref: "menu", default: "Undefined" },
+    resMenuInfor: { type: mongoose.Schema.Types.ObjectId, ref: "menu"},
     resCateInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'category'},
     resOwnerInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'user'},
 

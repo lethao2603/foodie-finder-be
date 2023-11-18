@@ -21,6 +21,10 @@ routeAPI.post("/",
     authController.restrictTo('admin', 'restaurant-owner'), 
     RestaurantController.postCreateRestaurant
 );
+
+routeAPI.get("/pending", RestaurantController.getPendingRestaurants);
+routeAPI.patch("/respond", RestaurantController.respondToRestaurantRequest);
+
 routeAPI.get("/:id", RestaurantController.getRestaurantById);
 routeAPI.patch("/:id",
     authController.protect, 

@@ -1,6 +1,7 @@
 const multer = require('multer');
 const sharp = require('sharp');
 const useServices = require("../../services/restaurant/restaurantServices");
+const Restaurant = require("../../models/restaurant.model");
 
 const multerStorage = multer.memoryStorage();
 
@@ -52,17 +53,60 @@ exports.resizeResImages = async (req, res, next) => {
 
 exports.postCreateRestaurant = async (req, res) => {
     try {
+        if(!req.body.resOwner) req.body.resOwnerInfor = req.user.id; 
         let result = await useServices.createRestaurant(req.body);
         return res.status(201).json(
             {
                 status: 'success',
                 data: result
             });
+        // triển khai logic thông báo cho admin tại đây
     } catch (error) {
         res.status(400).json({
             status: 'fail',
             message: error
         });
+    }
+};
+
+exports.getPendingRestaurants = async (req, res) => {
+    try {
+        const result = await Restaurant.find({ status: 'pending' });
+        return res.status(200).json({
+            data: result
+        })
+    } catch (error) {
+        res.status(404).json({
+            status: 'fail',
+            message: error
+        }); 
+    }
+};
+
+exports.respondToRestaurantRequest = async (req, res) => {
+    try {
+      const { restaurantId, action } = req.body;
+      const validActions = ['accept', 'reject'];
+      if (!validActions.includes(action)) {
+        return res.status(400).json({ error: 'Invalid action' });
+      }
+  
+      const restaurant = await Restaurant.findById(restaurantId);
+      if (!restaurant) {
+        return res.status(404).json({ error: 'Restaurant not found' });
+      }
+  
+      if (action === 'accept') {
+        restaurant.status = 'accepted';
+      } else {
+        restaurant.status = 'rejected';
+      }
+  
+      await restaurant.save();
+      res.json(restaurant);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Internal Server Error' });
     }
 };
 
