@@ -23,6 +23,13 @@ const signToken = id => {
   });
 };
 
+const signRefreshToken = id => {
+  return jwt.sign({id}, process.env.JWT_RÈSECRET_KEY, {
+    expiresIn: process.env.JWT_EXPIRS_IN
+  });
+};
+
+
 const createSendToken = (User, statusCode, res) => {
   const token = signToken(User._id);
   const cookieOptions = {
@@ -166,6 +173,8 @@ exports.protect = async (req, res, next) => {
   if(!token) {
     return next(new AppError('You are not logged in! Please log in to get access.', 401));
   }
+
+  // check token exprations
 
   // Verification token
   const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET_KEY);
