@@ -19,4 +19,8 @@ router.use("/file", require("./file.route"));
 
 router.use("/category", require("./category/category.router"));
 
+router.use("/admin/category", require("../apis/admin/category.route"))
+
+router.use("/recommendation", require("./recommendation.route"))
+
 module.exports = router;

@@ -12,8 +12,8 @@ exports.signAccessToken = (user) => {
   });
 };
 
-exports.signRefreshToken = (id) => {
-  return jwt.sign({ id }, JWT_SECRET_KEY, {
+exports.signRefreshToken = (user) => {
+  return jwt.sign({ id: user._id }, JWT_SECRET_KEY, {
     expiresIn: REFRESH_TOKEN_EXPIRATION,
   });
 };
