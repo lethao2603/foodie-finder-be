@@ -1,7 +1,8 @@
-const {promisify} = require('util');
-const jwt = require('jsonwebtoken');
-const { signAccessToken, signRefreshToken } = require("../utils/auth.util");
+const { promisify } = require("util");
+const jwt = require("jsonwebtoken");
+const { signAccessToken, signRefreshToken, verifyRefreshToken } = require("../utils/auth.util");
 const User = require("./../models/user.model");
+const PersonalConfig = require("../models/personal-config.model");
 const AppError = require("../utils/appError.util");
 const { readJSONFile } = require("../data/fileUtils");
 const {
@@ -15,42 +16,34 @@ const sendMail = require("../utils/sendMail.util");
 const { getVerifyEmailTemplate } = require("../utils/helper.util");
 const Menu = require("../models/menu.model");
 const Restaurant = require("../models/restaurant.model");
-const { use } = require('../routes/apis/auth.route');
+const { use } = require("../routes/apis/auth.route");
 
-const signToken = id => {
-  return jwt.sign({id}, process.env.JWT_SECRET_KEY, {
-    expiresIn: process.env.JWT_EXPIRS_IN
+const signToken = (id) => {
+  return jwt.sign({ id }, process.env.JWT_SECRET_KEY, {
+    expiresIn: process.env.JWT_EXPIRS_IN,
   });
 };
-
-const signRefreshToken = id => {
-  return jwt.sign({id}, process.env.JWT_RÈSECRET_KEY, {
-    expiresIn: process.env.JWT_EXPIRS_IN
-  });
-};
-
 
 const createSendToken = (User, statusCode, res) => {
   const token = signToken(User._id);
   const cookieOptions = {
     expires: new Date(Date.now() + processe.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000),
-    httpOnly: true
+    httpOnly: true,
   };
-  if(pcocess.env.NODE_ENV === 'production')
-    cookieOptions.secure = true;
-  
-  res.cookie('jwt', token, cookieOptions);
+  if (pcocess.env.NODE_ENV === "production") cookieOptions.secure = true;
+
+  res.cookie("jwt", token, cookieOptions);
 
   //Remove password from output
   user.password = undefined;
   res.status(statusCode).json({
-    status: 'success',
+    status: "success",
     token,
     data: {
-      user
-    }
+      user,
+    },
   });
-}
+};
 
 exports.register = async (req, res, next) => {
   try {
@@ -101,13 +94,20 @@ exports.login = async (req, res, next) => {
     if (!(await User.compare(password, userDb.password))) {
       throw new AppError(404, "fail", "ERR_LOGIN_3", CLIENT_ERROR_MESSAGE.ERR_LOGIN_3);
     }
-    console.log(password, userDb.password);
+    // console.log(password, userDb.password);
+    const config = await PersonalConfig.findOne({ userId: userDb._id });
+    if (config.firstTimeLogin) {
+      await PersonalConfig.findByIdAndUpdate(config._id, { firstTimeLogin: false });
+    }
     const token = signAccessToken(userDb);
+    const refreshToken = signRefreshToken(userDb);
     userDb.password = undefined;
 
     res.status(200).send({
       status: "success",
       token,
+      refreshToken,
+      config,
       // data: {
       //   user: userDb,
       // },
@@ -120,6 +120,7 @@ exports.login = async (req, res, next) => {
 exports.verifyLink = async (req, res, next) => {
   try {
     const user = await User.findOne({ _id: req.params.id });
+
     if (!user) {
       throw new AppError(404, "fail", undefined, "Invalid link");
     }
@@ -130,6 +131,11 @@ exports.verifyLink = async (req, res, next) => {
     if (!token) {
       throw new AppError(404, "fail", undefined, "Invalid link");
     }
+    const userId = user._id;
+    var config = {
+      userId,
+    };
+    await PersonalConfig.create(config);
     await User.updateOne({ _id: user._id, verified: true });
     await token.remove();
 
@@ -143,7 +149,21 @@ exports.verifyLink = async (req, res, next) => {
 };
 
 exports.logout = async (req, res, next) => {};
-exports.refreshToken = async (req, res, next) => {};
+exports.refreshToken = async (req, res, next) => {
+  try {
+    const { refreshToken } = req.body;
+    if (!refreshToken) return next(new Error("Refresh token is required"));
+    const id = await verifyRefreshToken(refreshToken);
+    const userDb = await User.findById(id);
+    const accessToken = signAccessToken(userDb);
+    res.status(200).json({
+      success: true,
+      accessToken,
+    });
+  } catch (err) {
+    next(err);
+  }
+};
 exports.insertData = async (req, res, next) => {
   const dataMenu = readJSONFile(`Menu_${req.params.category}.json`);
   const dataRes = readJSONFile(`${req.params.category}.json`);
@@ -166,12 +186,12 @@ exports.insertData = async (req, res, next) => {
 exports.protect = async (req, res, next) => {
   // Getting token and check of it's there
   let token;
-  if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
-    token = req.headers.authorization.split(' ')[1];
+  if (req.headers.authorization && req.headers.authorization.startsWith("Bearer")) {
+    token = req.headers.authorization.split(" ")[1];
   }
 
-  if(!token) {
-    return next(new AppError('You are not logged in! Please log in to get access.', 401));
+  if (!token) {
+    return next(new AppError("You are not logged in! Please log in to get access.", 401));
   }
 
   // check token exprations
@@ -181,8 +201,8 @@ exports.protect = async (req, res, next) => {
 
   // Check if user still exists
   const currenUser = await User.findById(decoded.id);
-  if(!currenUser) {
-    return next(new AppError('The user belonging to this token does no longer exist.', 401));
+  if (!currenUser) {
+    return next(new AppError("The user belonging to this token does no longer exist.", 401));
   }
 
   // Check if user changed password after the token was issued
@@ -198,24 +218,24 @@ exports.protect = async (req, res, next) => {
 exports.restrictTo = (...role) => {
   return (req, res, next) => {
     // role ['customer', 'restaurant-owner', 'admin']
-    if(!role.includes(req.user.role)) {
-      return next(new AppError('You do not have permission to perform this action', 403));
+    if (!role.includes(req.user.role)) {
+      return next(new AppError("You do not have permission to perform this action", 403));
     }
     next();
-  }
+  };
 };
 
 exports.forgotPassword = async (req, res, next) => {
   // Get user based on POSTed email
-  const user = await User.findOne({email: req.body.email})
-  if(!user) {
-    return next(new AppError('There is no user with email address.', 404));
+  const user = await User.findOne({ email: req.body.email });
+  if (!user) {
+    return next(new AppError("There is no user with email address.", 404));
   }
   // Generate the ramdom reset token
   const resetToken = user.createPasswordResetToken();
-  await user.save({validateBeforeSave: false}); 
+  await user.save({ validateBeforeSave: false });
   // Send it to user's email
-  const resetURL = `${req.protocol}://${req.get('host')}/api/auth/resetPassword/${resetToken}`;
+  const resetURL = `${req.protocol}://${req.get("host")}/api/auth/resetPassword/${resetToken}`;
 
   const message = `Forgot your password? Submit a PATCH request with your new password
   and password confirm to: ${resetURL}.\nIf you didn't forget your password, please ignore
@@ -223,24 +243,22 @@ exports.forgotPassword = async (req, res, next) => {
 
   try {
     await sendMail({
-      email: user.email, 
-      subject: 'Your password reset token (valid for 10 min)',
-      message
+      email: user.email,
+      subject: "Your password reset token (valid for 10 min)",
+      message,
     });
-  
+
     res.status(200).json({
-      status: 'success',
-      message: 'Token sent to email!'
+      status: "success",
+      message: "Token sent to email!",
     });
   } catch (error) {
-    User.passwordResetToken= undefined;
-    User.passwordResetExpires = undefined; 
-    await user.save({validateBeforeSave: false});
+    User.passwordResetToken = undefined;
+    User.passwordResetExpires = undefined;
+    await user.save({ validateBeforeSave: false });
 
-    return next(new AppError('There was an error sending the email. try again later!'), 500)
+    return next(new AppError("There was an error sending the email. try again later!"), 500);
   }
 };
-   
-exports.resetPassword = (req, res, next) => {
 
-}
+exports.resetPassword = (req, res, next) => {};

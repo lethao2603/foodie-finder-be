@@ -26,6 +26,10 @@ const personalConfigSchema = new mongoose.Schema(
         default: false,
       },
     },
+    firstTimeLogin: {
+      type: Boolean,
+      default: true,
+    },
 
     userId: {
       type: mongoose.Schema.Types.ObjectId,
@@ -35,8 +39,8 @@ const personalConfigSchema = new mongoose.Schema(
   { timestamps: true } // createAt, updateAt
 );
 
-categorySchema.plugin(mongoose_delete, { overrideMethods: "all" });
+personalConfigSchema.plugin(mongoose_delete, { overrideMethods: "all" });
 
-const PersonalConfig = mongoose.model("personalConfig", personalConfigSchema);
+const PersonalConfig = mongoose.model("personal_config", personalConfigSchema);
 
 module.exports = PersonalConfig;
