@@ -12,6 +12,13 @@ const getPagingData = (result, page, limit) => {
   return { result, currentPage, limit };
 };
 
+function splitTagName(tagName) {
+  return tagName
+    .replace("combo", "")
+    .split(/[^a-zA-Z]+/g)
+    .filter((s) => s);
+}
+
 const getVerifyEmailTemplate = (verifyLink) => {
   return `<!DOCTYPE html
   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -458,4 +465,4 @@ style="height:49px; v-text-anchor:middle; width:272px" arcsize="50%" stroke="f" 
 </html>`
 }
 
-module.exports = {getPagination, getPagingData, getVerifyEmailTemplate}
+module.exports = {getPagination, getPagingData, getVerifyEmailTemplate, splitTagName}

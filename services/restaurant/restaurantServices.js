@@ -1,44 +1,50 @@
 const Restaurant = require("../../models/restaurant.model");
 const Category = require("../../models/category.model");
+const Tag = require("../../models/tag.model");
 const APIFeatures = require("../../utils/apiFeatures");
-
+const {updateTagsOfRestaurant} = require("../../controllers/test.controller")
 exports.createRestaurant = async (data) => {
-  let result = await Restaurant.create(data);
-  return result;
+  try {
+    let result = await Restaurant.create(data);
+    const resId = result._id;
+    await updateTagsOfRestaurant({_id: resId})
+    return result;
+  } catch (err) {
+    next(err);
+  }
 };
 
 exports.getRestaurant = async (queryString) => {
-
   //EXECUTE QUERY
   const features = new APIFeatures(Restaurant.find(), queryString);
   const _ = await features.getMetadata();
-  features.search().filter().sort().limitFields().paginate()
+  features.search().filter().sort().limitFields().paginate();
   const result = await features.query;
   return { result, ...features.metadata, pageSize: result.length };
 };
 
 exports.getRestaurantById = async (id) => {
-    let result = await Restaurant.findById(id).populate('reviews')
-    .populate({path: 'resMenuInfor resOwnerInfor resCateInfor',
-    select: '-__v -createdAt -updatedAt -numericId -numericId1'});
-    return result;
+  let result = await Restaurant.findById(id).populate("reviews").populate({
+    path: "resMenuInfor resOwnerInfor resCateInfor",
+    select: "-__v -createdAt -updatedAt -numericId -numericId1",
+  });
+
+  return result;
 };
 
 exports.updateRestaurant = async (id, data) => {
-    let result = await Restaurant.updateOne({ _id: id }, { $set: data });
-    return result;
+  let result = await Restaurant.updateOne({ _id: id }, { $set: data });
+  return result;
 };
 
 exports.deleteRestaurant = async (id) => {
   let result = await Restaurant.deleteById(id);
+  
   return result;
 };
 
 exports.searchRestaurant = async (queryString) => {
-
-  const features = new APIFeatures(Restaurant.find(), queryString)
-  .search()
-  .paginate();
+  const features = new APIFeatures(Restaurant.find(), queryString).search().paginate();
   const result = await features.query;
   return result;
 };
