@@ -4,7 +4,12 @@ const authController = require("../../controllers/auth.controller");
 const recommedationController = require("../../controllers/recommendation/index.controller");
 
 router.post("/update-perferences", recommedationController.updateUserPreferences);
-router.post("/based-on-perferences", recommedationController.getTopNRecommendedBasedOnUserPreferences);
-router.post("/click-history", recommedationController.getTopNRecommendedBasedOnClickHistory);
-
+router.post(
+  "/based-on-perferences",
+  authController.protect,
+  recommedationController.getTopNRecommendedBasedOnUserPreferences
+);
+router.post("/based-on-history", authController.protect, recommedationController.getTopNRecommendedBasedOnSearchHistory);
+// router.get("/test-find/:tag", recommedationController.testFind)
+// router.get("/test", recommedationController.test)
 module.exports = router;

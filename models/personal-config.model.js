@@ -18,12 +18,17 @@ const personalConfigSchema = new mongoose.Schema(
     searchHistory: {
       values: [
         {
-          type: String,
+          restaurantId: String,
+          time: Date,
         },
       ],
       enabled: {
         type: Boolean,
         default: false,
+      },
+      maxItems: {
+        type: Number,
+        default: 3,
       },
     },
     firstTimeLogin: {

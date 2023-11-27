@@ -32,6 +32,14 @@ exports.verifyRefreshToken = (token) => {
 exports.checkAuthorities = (requiredRoles) => {
   return (req, res, next) => {
     // extract token
-    let token ;
-  }
-} 
+    let token;
+  };
+};
+
+exports.extractUserIdFromToken = (token) => {
+  if (!token) return null;
+  const tokenArr = token.split(" ");
+  if (tokenArr.length === 1 || tokenArr[0] !== "Bearer") return null;
+  const verify = jwt.verify(tokenArr[1], JWT_SECRET_KEY);
+  return verify.id;
+};

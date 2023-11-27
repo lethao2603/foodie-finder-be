@@ -102,7 +102,7 @@ exports.login = async (req, res, next) => {
     const token = signAccessToken(userDb);
     const refreshToken = signRefreshToken(userDb);
     userDb.password = undefined;
-
+    console.log(config)
     res.status(200).send({
       status: "success",
       token,

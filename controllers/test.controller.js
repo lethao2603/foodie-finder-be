@@ -6,6 +6,7 @@ const Tag = require("../models/tag.model");
 const User = require("../models/user.model");
 const PersonalConfig = require("../models/personal-config.model");
 const crypto = require("crypto");
+const { splitTagName } = require("../utils/helper.util");
 /**
  * @description Here is example of controller function
  * @todo write logic here, inside the try block
@@ -109,14 +110,25 @@ exports.buildTagSystem = async function (req, res, next) {
 
 exports.slugifyRestaurant = async (req, res, next) => {
   try {
-    Restaurant.find({}, (err, documents) => {
+    await this.updateTagsOfRestaurant({});
+
+    res.status(200).send({
+      message: "All done!!!",
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+
+exports.updateTagsOfRestaurant = async (query) => {
+  try {
+    Restaurant.find(query, async (err, documents) => {
       if (err) {
-        next(err);
+        throw err;
       }
-      documents.forEach(async (doc) => {
+      for (const doc of documents) {
         const menuId = doc.resMenuInfor;
         const menu = await Menu.findById(menuId);
-        // console.log("menu: " + menu)
         const tagsByMenuItem = menu.items.map((item) => {
           const tagName = slugify(item.name, {
             replacement: "-", // replace spaces with replacement character, defaults to `-`
@@ -127,11 +139,10 @@ exports.slugifyRestaurant = async (req, res, next) => {
             trim: true, // trim leading and trailing replacement chars, defaults to `true`
           });
           return {
-            name: tagName,
+            name: splitTagName(tagName).join("-"),
             desc: item.name,
           };
         });
-        // console.log(tagsByMenuItem)
         Tag.insertMany(tagsByMenuItem, async (err, tags) => {
           await Restaurant.findOneAndUpdate(
             { _id: doc._id },
@@ -140,13 +151,10 @@ exports.slugifyRestaurant = async (req, res, next) => {
             }
           );
         });
-      });
-    });
-
-    res.status(200).send({
-      message: "All done!!!",
+      }
+      return;
     });
   } catch (err) {
-    next(err);
+    throw err;
   }
 };
