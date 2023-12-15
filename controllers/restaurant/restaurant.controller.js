@@ -4,7 +4,8 @@ const useServices = require("../../services/restaurant/restaurantServices");
 const { extractUserIdFromToken } = require("../../utils/auth.util");
 const { updateSearchHistory } = require("../../controllers/recommendation/index.controller");
 const multerStorage = multer.memoryStorage();
-
+const Restaurant = require("../../models/restaurant.model");
+const mongoose = require("mongoose");
 const multerFilter = (req, file, cb) => {
   if (file.mimetype.startsWith("image")) {
     cb(null, true);
@@ -176,6 +177,25 @@ exports.getTourStats = async (req, res) => {
     return res.status(200).json({
       status: "success",
       data: stats,
+    });
+  } catch (error) {
+    res.status(404).json({
+      status: "fail",
+      message: error,
+    });
+  }
+};
+
+exports.getAllRestaurants = async (req, res, next) => {
+  console.log('a')
+  try {
+    const ids = req.body.ids;
+    const objIds = ids.map(id => mongoose.Types.ObjectId(id))
+ 
+    const restaurants = await Restaurant.find({ _id: { $in: objIds } });
+    return res.status(200).json({
+      status: "success",
+      data: restaurants,
     });
   } catch (error) {
     res.status(404).json({

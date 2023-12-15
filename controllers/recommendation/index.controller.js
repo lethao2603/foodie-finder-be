@@ -31,8 +31,6 @@ exports.updateUserPreferences = async function (req, res, next) {
       values: [...slugs],
       enabled: true,
     };
-    // console.log(verify.id);
-    // console.log(updatedPreferences);
     const doc = await PersonalConfig.findOneAndUpdate(
       { userId: userId },
       {
@@ -85,7 +83,6 @@ exports.getTopNRecommendedBasedOnSearchHistory = async function (req, res, next)
       .sort((a, b) => b.time.getTime() - a.time.getTime())
       .map((elm) => elm.restaurantId);
     let promises = searchHistory.map((elm) => getSimilarRestaurantsByTags(elm));
-    // console.log(promises.length);
     const results = await Promise.all(promises);
     // ====> results = [[array of restaurant that similar to search history 1], [array of .. history 2], []]
     let uniqueResult = [];
@@ -137,6 +134,15 @@ exports.updateSearchHistory = async function (userId, restaurantId) {
   }
 };
 
+exports.updateReviewDataset = async (req, res, next) => {
+  try {
+    
+
+  }catch (err) {
+    throw err;
+  }
+}
+
 async function getSimilarRestaurantsByTags(restaurantId) {
   try {
     const restaurant = await Restaurant.findById(restaurantId).populate("tags");
@@ -154,13 +160,6 @@ async function getSimilarRestaurantsByTags(restaurantId) {
     // let result = [];
     // console.log(normalizedTags);
     const promises = normalizedTags.map((tag) => findSimilarRestaurantsByTagName(tag));
-    // console.log(promises);
-    // for (const tag of normalizedTags) {
-
-    //   promises.push(findSimilarRestaurantsByTagName(tag));
-    //   console.log(tag);
-    //   const res = await findSimilarRestaurantsByTagName(tag);
-    // }
     const result = await Promise.all(promises);
     // ====> result = [[Fn(tag1), Fn(tag2)], [Fn(tag3), Fn(tag4)]]
 
@@ -218,63 +217,3 @@ function distinctRestaurantsBySlug(restaurants) {
   return distinct;
 }
 
-// exports.testFind = async (req, res, next) => {
-//   try {
-//     const restaurantId = "653d5116f554bd3ad0a6d2e4";
-//     const tag = req.params.tag;
-//     const result = await Restaurant.aggregate([
-//       {
-//         $unwind: "$tags",
-//       },
-//       {
-//         $lookup: {
-//           from: Tag.collection.name,
-//           localField: "tags",
-//           foreignField: "_id",
-//           as: "tags",
-//         },
-//       },
-//       {
-//         $match: {
-//           "tags.name": new RegExp(`^${tag}`, "i"),
-//         },
-//       },
-//     ]).exec();
-//     return res.status(200).json({
-//       status: "success",
-//       data: result,
-//     });
-//   } catch (err) {
-//     next(err);
-//   }
-// };
-
-// exports.test = async (req, res, next) => {
-//   try {
-//     Tag.find({}, (err, documents) => {
-//       if (err) {
-//         next(err);
-//       }
-//       documents.forEach(async (doc) => {
-//         const tagName = slugify(doc.desc, {
-//           replacement: "-",
-//           remove: undefined,
-//           lower: true,
-
-//           locale: "vi",
-//           trim: true,
-//         });
-//         const normalized = splitTagName(tagName).join("-");
-//         await Tag.findByIdAndUpdate(doc._id, {
-//           name: normalized,
-//         });
-//       });
-//     });
-//     return res.status(200).json({
-//       status: "success",
-//       // data: result,
-//     });
-//   } catch (err) {
-//     next(err);
-//   }
-// };

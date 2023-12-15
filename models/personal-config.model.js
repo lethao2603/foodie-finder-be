@@ -31,6 +31,9 @@ const personalConfigSchema = new mongoose.Schema(
         default: 3,
       },
     },
+    CFRecommendation: {
+      type: Map,
+    },
     firstTimeLogin: {
       type: Boolean,
       default: true,
