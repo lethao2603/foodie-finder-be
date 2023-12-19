@@ -21,29 +21,15 @@ const restaurantSchema = new mongoose.Schema(
       district: { type: String, required: [true, "District must not be empty"], trim: true },
       city: { type: String, required: [true, "City must not be empty"], trim: true },
     },
-<<<<<<< HEAD
     timeOpen: { type: String, required: [true, 'timeOpen must not be empty']},
     timeClose: { type: String, required: [true, 'timeClose must not be empty']},
     seats: { type: Number, required: [true, 'seats must not be empty'],
       min: [10, 'Seats must be greater than or equal to 10'],
       max: [100, 'Seats must be less than or equal to 100'],},
-=======
-    timeOpen: { type: String, required: [true, "timeOpen must not be empty"] },
-    timeClose: { type: String, required: [true, "timeClose must not be empty"] },
-    seats: { type: Number, required: [true, "seats must not be empty"] },
->>>>>>> 7185221ab6b327587a0311813bc54e38c937da32
     typeOfRes: {
       type: String,
       required: [true, "typeOfRes must not be empty"],
     },
-<<<<<<< HEAD
-    status: { type: String, default: 'pending' }, // 'pending', 'accepted', 'rejected'
-    description: { type: String, trim: true},
-    image: {type: String, required: [true, 'image must not be empty']},
-    resMenuInfor: { type: mongoose.Schema.Types.ObjectId, ref: "menu"},
-    resCateInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'category'},
-    resOwnerInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'user'},
-=======
     averagePrice: { type: Number, required: [true, "averagePrice must not be empty"] },
     pointEvaluation: {
       type: Number,
@@ -58,12 +44,12 @@ const restaurantSchema = new mongoose.Schema(
         ref: "tag",
       },
     ],
+    status: { type: String, default: 'pending' }, // 'pending', 'accepted', 'rejected'
     description: { type: String, trim: true },
     image: { type: String, required: [true, "image must not be empty"] },
     resMenuInfor: { type: mongoose.Schema.Types.ObjectId, ref: "menu", default: "Undefined" },
     resCateInfor: { type: mongoose.Schema.Types.ObjectId, ref: "category" },
     resOwnerInfor: { type: mongoose.Schema.Types.ObjectId, ref: "user" },
->>>>>>> 7185221ab6b327587a0311813bc54e38c937da32
 
     // reservations: [{type: mongoose.Schema.Types.ObjectId, ref: 'reservations'}],
     numericId1: {
