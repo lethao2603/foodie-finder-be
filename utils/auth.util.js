@@ -12,8 +12,8 @@ exports.signAccessToken = (user) => {
   });
 };
 
-exports.signRefreshToken = (id) => {
-  return jwt.sign({ id }, JWT_SECRET_KEY, {
+exports.signRefreshToken = (user) => {
+  return jwt.sign({ id: user._id }, JWT_SECRET_KEY, {
     expiresIn: REFRESH_TOKEN_EXPIRATION,
   });
 };
@@ -32,6 +32,14 @@ exports.verifyRefreshToken = (token) => {
 exports.checkAuthorities = (requiredRoles) => {
   return (req, res, next) => {
     // extract token
-    let token ;
-  }
-} 
+    let token;
+  };
+};
+
+exports.extractUserIdFromToken = (token) => {
+  if (!token) return null;
+  const tokenArr = token.split(" ");
+  if (tokenArr.length === 1 || tokenArr[0] !== "Bearer") return null;
+  const verify = jwt.verify(tokenArr[1], JWT_SECRET_KEY);
+  return verify.id;
+};
