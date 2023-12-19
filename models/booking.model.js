@@ -9,7 +9,7 @@ const bookingSchema = new mongoose.Schema({
     date: { type: Date, required: true },
     time: { type: String, required: true },
     numberOfPeople: { type: Number, required: true },
-    status:{type: Boolean, default: false}, 
+    status: { type: String, default: 'pending' }, // 'pending', 'accepted', 'rejected' 
     resInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'restaurant'},
     cusInfor: {type: mongoose.Schema.Types.ObjectId, ref: 'user'},
     },

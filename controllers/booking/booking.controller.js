@@ -1,6 +1,6 @@
 const useServices = require("../../services/booking/bookingServices")
 const Booking = require("../../models/booking.model");
-const socketService = require('../../libs/socket.lib');
+const socketIO = require('../../libs/socket.lib');
 
 exports.postCreateBooking = async (req, res) => {
     try {
@@ -23,29 +23,44 @@ exports.postCreateBooking = async (req, res) => {
     }
 };
 
-exports.patchBookingConfirm = async (req, res) => {
+exports.getPendingBooking = async (req, res) => {
     try {
-        const bookingId = req.params.bookingId;
-        // Tìm đơn đặt bàn trong cơ sở dữ liệu
-        const findBooking = await Booking.findById(bookingId);
-
-        // Kiểm tra xem đơn đặt bàn có tồn tại hay không
-        if (findBooking) {
-            findBooking.status = true;
-
-            // Lưu thông tin đơn đặt bàn đã cập nhật vào cơ sở dữ liệu
-            await findBooking.save();
-
-            // Thông báo cho khách hàng với Socket.IO
-            socketService.emitBookingConfirmedEvent(bookingId, 'Đơn đặt bàn của bạn đã được chấp nhận', bookingId );
-
-            res.json({ status: true });
-        } else {
-            res.status(404).json({ error: 'Booking not found' });
-        }
+        const result = await Booking.find({ status: 'pending' });
+        return res.status(200).json({
+            data: result
+        })
     } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Internal Server Error' });
+        res.status(404).json({
+            status: 'fail',
+            message: error
+        }); 
+    }
+};
+
+exports.respondToBookingRequest = async (req, res) => {
+    try {
+      const { bookingId, action } = req.body;
+      const validActions = ['accept', 'reject'];
+      if (!validActions.includes(action)) {
+        return res.status(400).json({ error: 'Invalid action' });
+      }
+  
+      const booking = await Booking.findById(bookingId);
+      if (!booking) {
+        return res.status(404).json({ error: 'Booking not found' });
+      }
+  
+      if (action === 'accept') {
+        booking.status = 'accepted';
+      } else {
+        booking.status = 'rejected';
+      }
+  
+      await booking.save();
+      res.json(booking);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Internal Server Error' });
     }
 };
 

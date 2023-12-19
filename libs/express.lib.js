@@ -7,12 +7,13 @@ const bodyParser = require("body-parser");
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
-const {initializeSocket} = require('../libs/socket.lib');
+const socketIO = require('../libs/socket.lib');
 const http = require('http');
 
 const app = express();
 const sever = http.createServer(app);
-const io = initializeSocket(sever);
+// Enable Socket.IO
+socketIO.initializeSocketIO(sever);
 const globalErrorHandler = require("../controllers/globalError.controller");
 const apiRoutes = require("./../routes/index");
 // Allow Cross-Origin requests

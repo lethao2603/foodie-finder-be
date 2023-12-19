@@ -135,7 +135,19 @@ exports.verifyLink = async (req, res, next) => {
   }
 };
 
-exports.logout = async (req, res, next) => {};
+exports.logout = async (req, res, next) => {
+  try {
+
+    res.clearCookie('jwt');
+    res.status(200).json({
+      status: 'success',
+      message: 'User logged out successfully',
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+
 exports.refreshToken = async (req, res, next) => {};
 exports.insertData = async (req, res, next) => {
   const dataMenu = readJSONFile(`Menu_${req.params.category}.json`);
