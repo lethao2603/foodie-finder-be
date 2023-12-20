@@ -34,7 +34,7 @@ exports.updateUserPreferences = async function (req, res, next) {
     const doc = await PersonalConfig.findOneAndUpdate(
       { userId: userId },
       {
-        // firstTimeLogin: false,
+        firstTimeLogin: false,
         preferences: updatedPreferences,
       },
       {
