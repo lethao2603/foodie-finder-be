@@ -71,7 +71,6 @@ class APIFeatures {
       totalPage: Math.ceil(count / limit),
       currentPage: page * 1 || 1,
     };
-    console.log(this.metadata);
     return this;
   }
 }
