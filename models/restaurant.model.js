@@ -47,7 +47,7 @@ const restaurantSchema = new mongoose.Schema(
     status: { type: String, default: 'pending' }, // 'pending', 'accepted', 'rejected'
     description: { type: String, trim: true },
     image: { type: String, required: [true, "image must not be empty"] },
-    resMenuInfor: { type: mongoose.Schema.Types.ObjectId, ref: "menu", default: "Undefined" },
+    resMenuInfor: { type: mongoose.Schema.Types.ObjectId, ref: "menu"},
     resCateInfor: { type: mongoose.Schema.Types.ObjectId, ref: "category" },
     resOwnerInfor: { type: mongoose.Schema.Types.ObjectId, ref: "user" },
 
