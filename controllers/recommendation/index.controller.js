@@ -65,7 +65,7 @@ exports.getTopNRecommendedBasedOnUserPreferences = async function (req, res, nex
     console.log(slugs);
     const result = await Restaurant.find({ typeOfRes: { $in: slugs } })
       .sort({ pointEvaluation: -1 })
-      .limit(numOfItems);
+      .limit(50);
 
     return res.status(200).json({
       status: "success",
