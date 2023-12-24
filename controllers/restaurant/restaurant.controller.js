@@ -1,7 +1,7 @@
 const multer = require("multer");
 const sharp = require("sharp");
 const useServices = require("../../services/restaurant/restaurantServices");
-const Restaurant = require("../../models/restaurant.model");
+// const Restaurant = require("../../models/restaurant.model");
 const { extractUserIdFromToken } = require("../../utils/auth.util");
 const { updateSearchHistory } = require("../../controllers/recommendation/index.controller");
 const multerStorage = multer.memoryStorage();

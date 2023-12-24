@@ -65,7 +65,7 @@ exports.getTopNRecommendedBasedOnUserPreferences = async function (req, res, nex
     console.log(slugs);
     const result = await Restaurant.find({ typeOfRes: { $in: slugs } })
       .sort({ pointEvaluation: -1 })
-      .limit(50);
+      .limit(100);
 
     return res.status(200).json({
       status: "success",
@@ -136,12 +136,10 @@ exports.updateSearchHistory = async function (userId, restaurantId) {
 
 exports.updateReviewDataset = async (req, res, next) => {
   try {
-    
-
-  }catch (err) {
+  } catch (err) {
     throw err;
   }
-}
+};
 
 async function getSimilarRestaurantsByTags(restaurantId) {
   try {
@@ -216,4 +214,3 @@ function distinctRestaurantsBySlug(restaurants) {
   // console.log(distinct);
   return distinct;
 }
-
