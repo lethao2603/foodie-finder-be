@@ -18,7 +18,7 @@ exports.postCreateBooking = async (req, res) => {
     } catch (error) {
         res.status(400).json({
             status: 'fail',
-            message: error
+            message: error.message
         });
     }
 };
