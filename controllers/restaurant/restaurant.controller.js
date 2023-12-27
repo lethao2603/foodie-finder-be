@@ -1,11 +1,12 @@
 const multer = require("multer");
 const sharp = require("sharp");
 const useServices = require("../../services/restaurant/restaurantServices");
-// const Restaurant = require("../../models/restaurant.model");
+const Restaurant = require("../../models/restaurant.model");
 const { extractUserIdFromToken } = require("../../utils/auth.util");
 const { updateSearchHistory } = require("../../controllers/recommendation/index.controller");
 const multerStorage = multer.memoryStorage();
 const mongoose = require("mongoose");
+
 const multerFilter = (req, file, cb) => {
   if (file.mimetype.startsWith("image")) {
     cb(null, true);
@@ -169,6 +170,7 @@ exports.patchUpdateRestaurant = async (req, res) => {
 };
 exports.deleteDelRestaurant = async (req, res) => {
   try {
+    console.log(req.params.id);
     await useServices.deleteRestaurant(req.params.id);
     return res.status(204).json({
       status: "success",
@@ -241,6 +243,7 @@ exports.getAllRestaurants = async (req, res, next) => {
       data: restaurants,
     });
   } catch (error) {
+    console.error(error);
     res.status(404).json({
       status: "fail",
       message: error,

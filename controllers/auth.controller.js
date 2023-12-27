@@ -24,10 +24,10 @@ const signToken = (id) => {
   });
 };
 
-const createSendToken = (User, statusCode, res) => {
-  const token = signToken(User._id);
+const createSendToken = (user, statusCode, res) => {
+  const token = signToken(user._id);
   const cookieOptions = {
-    expires: new Date(Date.now() + processe.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000),
+    expires: new Date(Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000),
     httpOnly: true,
   };
   if (pcocess.env.NODE_ENV === "production") cookieOptions.secure = true;
@@ -48,7 +48,6 @@ const createSendToken = (User, statusCode, res) => {
 exports.register = async (req, res, next) => {
   try {
     const newUser = await User.create(req.body);
-    createSendToken(newUser, 201, res);
     newUser.password = undefined;
     const token = await new Token({
       userId: newUser._id,
@@ -72,7 +71,7 @@ exports.register = async (req, res, next) => {
     if (!err.isOperational) {
       err = new AppError(404, "fail", undefined, err.message);
     }
-    // console.log(err);
+    console.log(err);
     next(err);
   }
 };
@@ -102,7 +101,7 @@ exports.login = async (req, res, next) => {
     const token = signAccessToken(userDb);
     const refreshToken = signRefreshToken(userDb);
     userDb.password = undefined;
-    console.log(config)
+    console.log(config);
     res.status(200).send({
       status: "success",
       token,
@@ -144,17 +143,16 @@ exports.verifyLink = async (req, res, next) => {
       message: "Email verified successfully",
     });
   } catch (err) {
+    console.log(err);
     next(err);
   }
 };
-
 exports.logout = async (req, res, next) => {
   try {
-
-    res.clearCookie('jwt');
+    res.clearCookie("jwt");
     res.status(200).json({
-      status: 'success',
-      message: 'User logged out successfully',
+      status: "success",
+      message: "User logged out successfully",
     });
   } catch (err) {
     next(err);

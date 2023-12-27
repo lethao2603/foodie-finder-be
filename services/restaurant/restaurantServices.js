@@ -2,12 +2,12 @@ const Restaurant = require("../../models/restaurant.model");
 const Category = require("../../models/category.model");
 const Tag = require("../../models/tag.model");
 const APIFeatures = require("../../utils/apiFeatures");
-const {updateTagsOfRestaurant} = require("../../controllers/test.controller")
+const { updateTagsOfRestaurant } = require("../../controllers/test.controller");
 exports.createRestaurant = async (data) => {
   try {
     let result = await Restaurant.create(data);
     const resId = result._id;
-    await updateTagsOfRestaurant({_id: resId})
+    await updateTagsOfRestaurant({ _id: resId });
     return result;
   } catch (err) {
     next(err);
@@ -38,9 +38,13 @@ exports.updateRestaurant = async (id, data) => {
 };
 
 exports.deleteRestaurant = async (id) => {
-  let result = await Restaurant.deleteById(id);
-  
-  return result;
+  try {
+    let result = await Restaurant.deleteById(id);
+    return result;
+  } catch (err) {
+    console.log(err);
+    throw err;
+  }
 };
 
 exports.searchRestaurant = async (queryString) => {

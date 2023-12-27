@@ -16,4 +16,5 @@ router.post(
 );
 // router.get("/test-find/:tag", recommedationController.testFind)
 // router.get("/test", recommedationController.test)
+router.get("/getAllReviewById/:id", recommedationController.getAllReviewById);
 module.exports = router;

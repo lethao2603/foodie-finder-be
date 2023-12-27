@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 var slugify = require("slugify");
 const { splitTagName } = require("../../utils/helper.util");
 const mongoose = require("mongoose");
-
+const Review = require("../../models/review.model");
 exports.updateUserPreferences = async function (req, res, next) {
   try {
     const accessToken = req.headers.authorization;
@@ -214,3 +214,26 @@ function distinctRestaurantsBySlug(restaurants) {
   // console.log(distinct);
   return distinct;
 }
+
+exports.getAllReviewById = async function (req, res, next) {
+  try {
+    id = req.params.id;
+    console.log(id);
+    const result = await Review.find(
+      { cusInfor: mongoose.Types.ObjectId(id), deleted: false },
+      "resInfor rating"
+    );
+    // const ratedResInforList = result.map((review) => review.resInfor); // Chuyển ObjectID thành chuỗi
+    const ratedResInforList = result.map((review) => ({
+      resInfor: review.resInfor,
+      rating: review.rating,
+    }));
+    // return ratedResInforList;
+    return res.status(200).json({
+      status: "success",
+      data: ratedResInforList,
+    });
+  } catch (err) {
+    next(err);
+  }
+};
