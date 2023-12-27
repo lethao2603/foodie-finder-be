@@ -96,7 +96,7 @@ exports.login = async (req, res, next) => {
     }
     // console.log(password, userDb.password);
     const config = await PersonalConfig.findOne({ userId: userDb._id });
-    if (config.firstTimeLogin) {
+    if (config.firstTimeLogin && config.preferences.values && config.preferences.values.length > 0) {
       await PersonalConfig.findByIdAndUpdate(config._id, { firstTimeLogin: false });
     }
     const token = signAccessToken(userDb);

@@ -41,6 +41,8 @@ const EMAIL_VERIFY_SUBJECT = "Xác nhận email cho tài khoản FoodieFinder"
 
 const EMAIL_VERIFY_BODY = ""
 
+const INTERNAL_API_KEY = process.env.INTERNAL_API_KEY
+
 const CLIENT_ERROR_MESSAGE = {
   11000: "Email is already exists.",
   89: "Network timeout.",
@@ -71,5 +73,6 @@ module.exports = {
   EMAIL_SENDER_USER,
   EMAIL_SENDER_PASS,
   CLIENT_BASE_URL,
-  EMAIL_VERIFY_SUBJECT
+  EMAIL_VERIFY_SUBJECT,
+  INTERNAL_API_KEY
 };
