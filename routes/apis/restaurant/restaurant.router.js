@@ -17,14 +17,19 @@ routeAPI.get("/top-5-cheap",RestaurantController.aliasTopRestaurants,
 routeAPI.get("/search", RestaurantController.getsearchRestaurant);
 
 routeAPI.get("/", RestaurantController.getAllRestaurant);
+
 routeAPI.post("/",
     authController.protect, 
     authController.restrictTo('admin', 'restaurant-owner'), 
     RestaurantController.postCreateRestaurant
 );
 
-routeAPI.get("/pending", RestaurantController.getPendingRestaurants);
-routeAPI.patch("/respond", RestaurantController.respondToRestaurantRequest);
+routeAPI.get("/pending",
+    authController.protect,
+    authController.restrictTo('admin'), RestaurantController.getPendingRestaurants);
+routeAPI.patch("/respond",
+    authController.protect,
+    authController.restrictTo('admin'), RestaurantController.respondToRestaurantRequest);
 
 routeAPI.get("/:id", RestaurantController.getRestaurantById);
 routeAPI.patch("/:id",

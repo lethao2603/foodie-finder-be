@@ -9,8 +9,8 @@ routeAPI.use(authController.protect);
 routeAPI.post('/', authController.restrictTo('customer'), BookingController.postCreateBooking);
 routeAPI.get('/', BookingController.getAllBooking);
 
-routeAPI.get("/pending", BookingController.getPendingBooking);
-routeAPI.patch("/respond", BookingController.respondToBookingRequest);
+routeAPI.get("/pending",authController.restrictTo('restaurant-owner'), BookingController.getPendingBooking);
+routeAPI.patch("/respond",authController.restrictTo('restaurant-owner'), BookingController.respondToBookingRequest);
 
 routeAPI.use(authController.restrictTo('customer'));
 

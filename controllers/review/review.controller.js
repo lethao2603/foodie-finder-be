@@ -2,7 +2,15 @@ const useServices = require("../../services/review/reviewServices")
 
 exports.postCreateReview = async (req, res) => {
     try {
-        //Allow nested routes
+
+        const userBooking = await useServices.getUserBooking(req.user.id, req.params.resId);
+        if(!userBooking) {
+            return res.status(403).json({
+                status: 'fail',
+                message: 'You need to place an booking at the restaurant before posting a review.'
+            });
+        }
+        
         if(!req.body.restaurant) req.body.resInfor = req.params.resId;
         if(!req.body.customer) req.body.cusInfor = req.user.id;
 
