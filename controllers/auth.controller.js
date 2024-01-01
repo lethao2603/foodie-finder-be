@@ -147,11 +147,10 @@ exports.verifyLink = async (req, res, next) => {
 
 exports.logout = async (req, res, next) => {
   try {
-
-    res.clearCookie('jwt');
+    res.clearCookie("jwt");
     res.status(200).json({
-      status: 'success',
-      message: 'User logged out successfully',
+      status: "success",
+      message: "User logged out successfully",
     });
   } catch (err) {
     next(err);

@@ -1,5 +1,5 @@
 const useServices = require("../../services/review/reviewServices");
-const GlobalConfig = require("../../models/global-config.model")
+const GlobalConfig = require("../../models/global-config.model");
 const { Worker } = require("worker_threads");
 exports.postCreateReview = async (req, res) => {
   try {
