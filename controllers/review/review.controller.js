@@ -1,5 +1,6 @@
 const useServices = require("../../services/review/reviewServices");
-
+const GlobalConfig = require("../../models/global-config.model")
+const { Worker } = require("worker_threads");
 exports.postCreateReview = async (req, res) => {
   try {
     const { cusInfor, resInfor } = req.body;
@@ -15,6 +16,17 @@ exports.postCreateReview = async (req, res) => {
     // if (!req.body.customer) req.body.cusInfor = req.user.id;
 
     let result = await useServices.createReview(req.body);
+    // Calling update rcm data frame API when there is a new review was added to the system
+    const worker = new Worker("./workers/update-rcm-model.js");
+    worker.on("message", async (data) => {
+      console.log(data);
+      const x = await GlobalConfig.findOneAndUpdate(
+        { name: "recommendation_config" },
+        { $inc: { rcmDataframeVersion: 1 } },
+        { useFindAndModify: false }
+      );
+    });
+
     return res.status(201).json({
       status: "success",
       data: result,

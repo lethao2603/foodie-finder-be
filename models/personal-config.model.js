@@ -34,6 +34,12 @@ const personalConfigSchema = new mongoose.Schema(
     CFRecommendation: {
       type: Map,
     },
+    
+    rcmDataframeVersion: {
+      type: Number,
+      default: 1,
+    },
+
     firstTimeLogin: {
       type: Boolean,
       default: true,

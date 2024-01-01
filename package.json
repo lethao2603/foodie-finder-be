@@ -37,6 +37,7 @@
     "mssql": "^9.1.1",
     "multer": "^1.4.5-lts.1",
     "mysql": "^2.18.1",
+    "node-fetch": "^2.6.1",
     "nodemailer": "^6.9.6",
     "save": "^2.9.0",
     "sharp": "^0.32.6",
