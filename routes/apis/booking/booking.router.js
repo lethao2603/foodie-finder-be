@@ -6,8 +6,10 @@ const authController = require("../../../controllers/auth.controller");
 //routerAPI
 routeAPI.use(authController.protect);
 
+routeAPI.get('/my-bookings', BookingController.getBookingByCustomerId);
 routeAPI.post('/', authController.restrictTo('customer'), BookingController.postCreateBooking);
 routeAPI.get('/', BookingController.getAllBooking);
+
 
 routeAPI.get("/pending",authController.restrictTo('restaurant-owner'), BookingController.getPendingBooking);
 routeAPI.patch("/respond",authController.restrictTo('restaurant-owner'), BookingController.respondToBookingRequest);

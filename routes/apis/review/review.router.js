@@ -6,8 +6,9 @@ const authController = require('../../../controllers/auth.controller');
 //routerAPI
 
 
-routeAPI.get('/', reviewController.getAllReview);
+routeAPI.get('/restaurant/:resId', reviewController.getAllReview);
 routeAPI.use(authController.protect)
+routeAPI.get('/my-review', reviewController.getMyReview);
 routeAPI.post('/', authController.restrictTo('customer'), reviewController.postCreateReview);
 
 routeAPI.patch('/:id', 
