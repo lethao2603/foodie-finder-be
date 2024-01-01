@@ -150,6 +150,9 @@ async function getSimilarRestaurantsByTags(restaurantId) {
     const tags = restaurant.tags;
     // combo-69k-banh-canh-cua-gia-truyen-ngon
 
+    // bo cac tu combo, cac so 1 2 3
+    // sau do lấy 3 tu dau tien. vi du combo-69k-banh-canh-cua-gia-truyen-ngon => banh-canh-cua
+    // 
     const normalizedTags = tags
       .map((tag) => splitTagName(tag.name).slice(0, 3).join("-"))
       .filter((tag, idx, self) => {
@@ -174,7 +177,7 @@ async function getSimilarRestaurantsByTags(restaurantId) {
     return [];
   }
 }
-
+// tim cac nha hang co tag name bat dau bang tag da nomarlized
 async function findSimilarRestaurantsByTagName(tagName) {
   try {
     const result = await Restaurant.aggregate([

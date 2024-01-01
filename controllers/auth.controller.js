@@ -68,11 +68,9 @@ exports.register = async (req, res, next) => {
     //   status: "fail",
     //   message: err,
     // });
-    // console.log(err.message);
     if (!err.isOperational) {
       err = new AppError(404, "fail", undefined, err.message);
     }
-    // console.log(err);
     next(err);
   }
 };
@@ -102,7 +100,6 @@ exports.login = async (req, res, next) => {
     const token = signAccessToken(userDb);
     const refreshToken = signRefreshToken(userDb);
     userDb.password = undefined;
-    console.log(config)
     res.status(200).send({
       status: "success",
       token,
