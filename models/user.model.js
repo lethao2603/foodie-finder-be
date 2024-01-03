@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 const validator = require("validator");
 const mongoose_delete = require("mongoose-delete");
 
-const crypto = require('crypto');
+const crypto = require("crypto");
 
 const { AutoIncrement } = require("../config/db");
 
@@ -61,19 +61,17 @@ const userSchema = new mongoose.Schema(
       type: Number,
       unique: true,
     },
+    birthDay: { type: Date, default: new Date(1991, 1, 1) },
   },
   {
     timestamps: true,
   }
-
 );
-userSchema.path('phone').select(false);
-userSchema.path('password').select(false);
+// userSchema.path('phone').select(false);
+userSchema.path("password").select(false);
 userSchema.plugin(mongoose_delete, { overrideMethods: "all" });
 
-userSchema.index({firstName: 'text',
-lastName: 'text',email: 'text', phone: 'text'
-});
+userSchema.index({ firstName: "text", lastName: "text", email: "text", phone: "text" });
 
 // Statics
 userSchema.statics.compare = async (candidatePassword, password) => {
@@ -92,17 +90,17 @@ userSchema.pre("save", async function (next) {
   next();
 });
 
-userSchema.methods.createPasswordResetToken = function() {
-  const resetToken = crypto.randomBytes(32).toString('hex');
+userSchema.methods.createPasswordResetToken = function () {
+  const resetToken = crypto.randomBytes(32).toString("hex");
 
-  this.passwordResetToken = crypto.createHash('sha256').update(resetToken).digest('hex');
+  this.passwordResetToken = crypto.createHash("sha256").update(resetToken).digest("hex");
 
-  console.log({resetToken}, this.passwordResetToken);
+  console.log({ resetToken }, this.passwordResetToken);
 
   this.passwordResetExpires = Date.now() + 10 * 60 * 1000;
 
   return resetToken;
-}
+};
 
 userSchema.plugin(AutoIncrement, { inc_field: "numericId" });
 

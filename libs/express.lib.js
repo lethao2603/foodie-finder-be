@@ -31,7 +31,7 @@ app.use(express.urlencoded({ extended: true})) // for form data
 
 // set limited request
 const limiter = rateLimit({
-  max: 150,
+  max: 1000,
   windowMs: 60 * 60 * 1000,
   message: "Too Many Request from this IP, please try again in an hour",
 });

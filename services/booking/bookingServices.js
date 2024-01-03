@@ -68,6 +68,7 @@ exports.allBookingsByCustomer = async (customerId, filter) => {
         restaurantId: "$restaurant._id",
         restaurantName: "$restaurant.resname",
         restaurantImage: "$restaurant.image",
+        restaurantAddress: "$restaurant.address",
       },
     },
     {
