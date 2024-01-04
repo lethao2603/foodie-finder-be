@@ -1,12 +1,14 @@
 const multer = require("multer");
 const sharp = require("sharp");
-
+const { Worker } = require("worker_threads");
 const useServices = require("../../services/user/userServices");
 const AppError = require("../../utils/appError.util");
 const User = require("../../models/user.model");
 const PersonalConfig = require("../../models/personal-config.model");
-
+const GlobalConfig = require("../../models/global-config.model");
+const Review = require("../../models/review.model");
 const multerStorage = multer.memoryStorage();
+const ObjectId = require("mongodb").ObjectId;
 
 const multerFilter = (req, file, cb) => {
   if (file.mimetype.startsWith("image")) {
@@ -44,9 +46,39 @@ const filterObj = (obj, ...allowedFields) => {
   return newObj;
 };
 
-exports.getMe = (req, res, next) => {
-  req.params.id = req.user.id;
-  next();
+exports.getMe = async (req, res, next) => {
+  try {
+    req.params.id = req.user.id;
+    const myConfig = await PersonalConfig.findOne({ userId: req.user.id });
+    const globalConfig = await GlobalConfig.findOne({ name: "recommendation_config" });
+    if (myConfig.rcmDataframeVersion != globalConfig.rcmDataframeVersion) {
+      console.log("need to re train model");
+      // Calling update rcm data frame API when there is a new review was added to the system
+      let restaurants = await Review.find({ cusInfor: ObjectId(req.user.id) });
+      // console.log(restaurants)
+      let data = {
+        userId: req.user.id,
+        rated_restaurants: restaurants.map((review) => {
+          return { resInfor: review.resInfor._id.toString(), rating: review.rating };
+        }),
+      };
+      console.log(data);
+      const worker = new Worker("./workers/train-rcm-model.js", {
+        workerData: { ratedRestaurants: data },
+      });
+      worker.on("message", async (data) => {
+        await PersonalConfig.findOneAndUpdate(
+          { userId: req.user.id },
+          { $inc: { rcmDataframeVersion: 1 } },
+          { useFindAndModify: false }
+        );
+        console.log(data);
+      });
+    }
+    next();
+  } catch (err) {
+    next(err);
+  }
 };
 
 exports.updateMe = async (req, res) => {
@@ -60,6 +92,30 @@ exports.updateMe = async (req, res) => {
   if (req.file) {
     filteredBody.photo = req.file.filename;
   }
+  //Update user document
+  const updateUser = await User.findByIdAndUpdate(req.user.id, filteredBody, {
+    new: true,
+    runValidators: true,
+  });
+
+  res.status(200).json({
+    status: "succes",
+    data: {
+      user: updateUser,
+    },
+  });
+};
+
+
+exports.updateMyInfo = async (req, res) => {
+  //Create error if user POSTs passowrd data
+  if (req.body.password || req.body.passwordConfirm) {
+    return next(new AppError("This route is not for password updates. Please use/updateMyPassword.", 400));
+  }
+
+  //Filtered out unwanted fields names that are not allowed to be updated
+  const filteredBody = filterObj(req.body, "firstName", "lastName", "phone", "email", "photo");
+
   //Update user document
   const updateUser = await User.findByIdAndUpdate(req.user.id, filteredBody, {
     new: true,
