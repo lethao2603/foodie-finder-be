@@ -8,14 +8,20 @@ const authController = require("../../../controllers/auth.controller");
 routeAPI.use(authController.protect);
 
 routeAPI.get("/me", UserController.getMe, UserController.getUserById);
-routeAPI.patch("/updateMe", 
-    UserController.uploadUserPhoto, 
-    UserController.resizeUserPhoto, 
-    UserController.updateMe);
+routeAPI.patch(
+  "/updateMe",
+  UserController.uploadUserPhoto,
+  UserController.resizeUserPhoto,
+  UserController.updateMe
+);
+
+routeAPI.patch(
+  "/updateMyInfo",
+  UserController.updateMyInfo
+);
 routeAPI.delete("/deleteMe", UserController.deleteMe);
 
-
-routeAPI.use(authController.restrictTo('admin'));
+routeAPI.use(authController.restrictTo("admin"));
 
 routeAPI.get("/", UserController.getAllUsers);
 routeAPI.post("/", UserController.postcreateUser);

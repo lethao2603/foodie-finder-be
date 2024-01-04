@@ -48,7 +48,7 @@ const createSendToken = (User, statusCode, res) => {
 exports.register = async (req, res, next) => {
   try {
     const newUser = await User.create(req.body);
-    createSendToken(newUser, 201, res);
+    // createSendToken(newUser, 201, res);
     newUser.password = undefined;
     const token = await new Token({
       userId: newUser._id,
@@ -133,7 +133,7 @@ exports.verifyLink = async (req, res, next) => {
       userId,
     };
     await PersonalConfig.create(config);
-    await User.updateOne({ _id: user._id, verified: true });
+    await User.updateOne({ _id: user._id}, {verified: true });
     await token.remove();
 
     res.status(200).send({

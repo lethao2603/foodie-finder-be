@@ -106,6 +106,30 @@ exports.updateMe = async (req, res) => {
   });
 };
 
+
+exports.updateMyInfo = async (req, res) => {
+  //Create error if user POSTs passowrd data
+  if (req.body.password || req.body.passwordConfirm) {
+    return next(new AppError("This route is not for password updates. Please use/updateMyPassword.", 400));
+  }
+
+  //Filtered out unwanted fields names that are not allowed to be updated
+  const filteredBody = filterObj(req.body, "firstName", "lastName", "phone", "email", "photo");
+
+  //Update user document
+  const updateUser = await User.findByIdAndUpdate(req.user.id, filteredBody, {
+    new: true,
+    runValidators: true,
+  });
+
+  res.status(200).json({
+    status: "succes",
+    data: {
+      user: updateUser,
+    },
+  });
+};
+
 exports.deleteMe = async (req, res) => {
   await User.deleteById(req.user.id);
 
