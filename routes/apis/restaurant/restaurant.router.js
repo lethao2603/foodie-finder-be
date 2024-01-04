@@ -7,7 +7,7 @@ const authController = require("../../../controllers/auth.controller");
 
 // POST /restaurant/d343dsds/review
 // GET /restaurant/d343dsds/review
-routeAPI.post("/get-by-id-list", RestaurantController.getAllRestaurants)
+// routeAPI.post("/get-by-id-list", RestaurantController.getAllRestaurants)
 routeAPI.use("/:resId/booking", bookingRouter);
 routeAPI.use("/:resId/review", reviewRouter);
 
