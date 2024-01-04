@@ -229,7 +229,7 @@ exports.getTourStats = async (req, res) => {
   }
 };
 
-exports.getAllRestaurants = async (req, res, next) => {
+exports.getByIds = async (req, res, next) => {
   try {
     const ids = req.body.ids;
     const objIds = ids.map((id) => mongoose.Types.ObjectId(id));
