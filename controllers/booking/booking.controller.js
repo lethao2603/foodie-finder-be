@@ -5,7 +5,7 @@ const { extractUserIdFromToken } = require("../../utils/auth.util");
 exports.postCreateBooking = async (req, res) => {
   try {
     //Allow nested routes
-    // if (!req.body.restaurant) req.body.resInfor = req.params.resId;
+    if (!req.body.restaurant) req.body.resInfor = req.params.resId;
     // if (!req.body.customer) req.body.cusInfor = req.user.id;
     const { customerName, email, phoneNumber, date, time, numberOfPeople, resInfor, cusInfor } = req.body;
     const data = { customerName, email, phoneNumber, date, time, numberOfPeople, resInfor, cusInfor };
