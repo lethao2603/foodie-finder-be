@@ -29,6 +29,7 @@ reviewSchema.pre(/^find/, function (next) {
 });
 
 reviewSchema.statics.calcAverageRatings = async function (resId) {
+
   const stats = await this.aggregate([
     {
       $match: { resInfor: resId },
@@ -67,6 +68,15 @@ reviewSchema.pre(/^findOneAnd/, async function (next) {
 reviewSchema.post(/^findOneAnd/, async function () {
   await this.r.constructor.calcAverageRatings(this.r.resInfor);
 });
+
+reviewSchema.post(/^findOneAnd/, async function () {
+  await this.r.constructor.calcAverageRatings(this.r.resInfor);
+});
+
+reviewSchema.post(/^findOne/, async function () {
+  await this.r.constructor.calcAverageRatings(this.r.resInfor);
+});
+
 
 const Review = mongoose.model("review", reviewSchema);
 

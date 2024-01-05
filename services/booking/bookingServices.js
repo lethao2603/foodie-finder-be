@@ -2,7 +2,7 @@ const Booking = require("../../models/booking.model");
 const APIFeatures = require("../../utils/apiFeatures");
 const socketIO = require("../../libs/socket.lib");
 const Restaurant = require("../../models/restaurant.model");
-const ObjectId = require('mongodb').ObjectId;
+const ObjectId = require("mongodb").ObjectId;
 
 exports.createBooking = async (data) => {
   let result = await Booking.create(data);
@@ -58,8 +58,9 @@ exports.allBookingsByCustomer = async (customerId, filter) => {
         localField: "resInfor",
         foreignField: "_id",
         as: "restaurant",
-      },  
+      },
     },
+    { $sort: { updatedAt: -1 } },
     {
       $unwind: "$restaurant",
     },

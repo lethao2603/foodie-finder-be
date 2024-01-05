@@ -69,7 +69,7 @@ exports.getMe = async (req, res, next) => {
       worker.on("message", async (data) => {
         await PersonalConfig.findOneAndUpdate(
           { userId: req.user.id },
-          { $inc: { rcmDataframeVersion: 1 } },
+          { $set: { rcmDataframeVersion: globalConfig.rcmDataframeVersion } },
           { useFindAndModify: false }
         );
         console.log(data);

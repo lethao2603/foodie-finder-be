@@ -5,7 +5,9 @@ const Restaurant = require("../../models/restaurant.model");
 const { extractUserIdFromToken } = require("../../utils/auth.util");
 const { updateSearchHistory } = require("../../controllers/recommendation/index.controller");
 const multerStorage = multer.memoryStorage();
+const Review = require("../../models/review.model");
 const mongoose = require("mongoose");
+const ObjectId = require("mongodb").ObjectId;
 const multerFilter = (req, file, cb) => {
   if (file.mimetype.startsWith("image")) {
     cb(null, true);
@@ -233,6 +235,8 @@ exports.getByIds = async (req, res, next) => {
   try {
     const ids = req.body.ids;
     const objIds = ids.map((id) => mongoose.Types.ObjectId(id));
+
+    // Shuffle array
 
     const restaurants = await Restaurant.find({ _id: { $in: objIds } });
     return res.status(200).json({
